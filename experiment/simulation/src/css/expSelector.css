@@ -1,0 +1,237 @@
+
+
+h1{
+    background-color: beige;
+    margin: none;
+  } 
+  header{
+    height: 10vh;
+    border-bottom:4px solid cadetblue ;
+  } 
+  header h2{
+    color: cadetblue;
+    display: inline-block;
+  } 
+  body{
+    height: 100vh;
+    width: 100vw;
+    margin: 0;
+     overflow: hidden;
+  }
+  .p-head {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 600;
+    letter-spacing: 1px;
+  }
+  .uppercase {
+    text-transform: uppercase;
+  }
+  .exp-changer {
+    display: flex;
+    justify-content: center;
+  }
+  .exp-changer-heading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: grey;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    outline: none;
+    position: relative;
+    top: 2.5vh;
+  }
+  
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .navbar1{
+    width: 8vw;
+    height: 35px;
+    color: #ffffff;
+    background-color: rgba(4, 59, 79, 0.5);
+    font-size: 1.5vw;
+    border-radius: 0 0 20px 0;
+    font-family: "Raleway",sans-serif;
+    }
+  
+    .navbar1 a{
+    padding-left: 10px;
+    color: #fff;
+    text-decoration: none;
+    }
+  
+    .navbar1 a:hover{
+    text-decoration: none;
+    }
+  
+  .navbar-heading{
+    width: 15%;
+    height: 35px;
+    display: flex;
+    justify-content: center;
+    color: #ffffff;
+    background-color: rgba(4, 59, 79, 0.5);
+    font-size: 1.4rem;
+    border-radius: 0 0 20px 20px;
+    font-family: "Raleway",sans-serif;
+    }
+  
+  .navbar2{
+    width: 8vw;
+    height: 35px;
+    color: #ffffff;
+    background-color: rgba(4, 59, 79, 0.5);
+    font-size: 1.5vw;
+    border-radius: 0 0 0 20px;
+    font-family: "Raleway",sans-serif;
+  }
+    
+  .navbar2 a{
+    padding-left: 10px;
+    color: #fff;
+    text-decoration: none;
+  }
+    
+  .navbar2 a:hover{
+    text-decoration: none;
+  }
+  
+
+  .nofled {
+    height: 80vh;
+    width: 100vw;
+    margin-top: 10px;
+  }
+  .nofledHead {
+    width: 100%;
+    height: 20vh;
+    margin-top: 3.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .nofledBoxContainer {
+    width: 100%;
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .leds {
+    background-color: rgb(46, 64, 92, 0.9);
+    color: white;
+    height: 2.5rem;
+    width: 60%;
+    text-decoration: none;
+    margin: 10px 0;
+    padding: 5px 10px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all ease-out 0.4s;
+  }
+  .leds:hover {
+    cursor: pointer;
+    background-color: rgb(36, 50, 72);
+    transition: all ease-out 0.4s;
+  }
+  
+  .separator {
+    border-radius: 20px;
+    height: 60vh;
+    width: 8px;
+    background-color: rgba(4, 59, 79, 0.5);
+    transition: all 0.4s ease-in;
+    transform: scale(1.1);
+  }
+  .separator:hover {
+    border-radius: 20px;
+    height: 75vh;
+    width: 6px;
+    background-color: rgba(4, 59, 79, 0.5);
+    transition: all 0.4s ease-in;
+    transform: scale(1);
+  }
+  
+  .if-vid {
+    width: 48vw;
+    height: 80vh;
+    padding: 3px;
+    /* background-color: rgba(4, 59, 79, 0.1); */
+    /* border: 3px solid rgba(4, 59, 79, 0.3); */
+    border-radius: 10px;
+     overflow: auto;
+  }
+  
+  .interfacing {
+    margin-left: 10px;
+    width: 100%;
+    max-width: 750px;
+     overflow: auto;
+    /* border: 3px solid rgba(4, 59, 79, 0.3); */
+    border-radius: 10px;
+    position: relative;
+  }
+  .interfacing img {
+    transition: all 0.4s ease;
+    width: 700px;
+    height: auto;
+  }
+  .interfacing #pushbutton {
+    position: absolute;
+    top: 34%;
+    left: 79%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    background-color: rgba(4, 59, 79, 0.0);
+    color: rgba(4, 59, 79, 0.0);
+    cursor: pointer;
+    border: 1px solid rgba(4, 59, 79, 0.0);
+  }
+  
+  .code {
+    width: 48vw;
+    height: 80vh;
+    padding: 3px;
+    /* border: 3px solid rgba(4, 59, 79, 0.3); */
+    border-radius: 10px;
+    /* background-color: rgba(4, 59, 79, 0.1); */
+  }
+  
+  .code-head {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+  }
+  #codeInput {
+    width: 700px;
+    height: 60vh;
+    border-radius: 10px;
+    border: 1px solid rgba(4, 59, 79, 0.2);
+  }
+  
+  
+  
+  @media screen and (max-width: 1000px) {
+    .navbar1 {
+      width: 14vw;
+      height: 27px;
+      font-size: 1.1rem;
+      }
+  
+    .navbar2 {
+      width: 17vw;
+      height: 27px;
+      font-size: 1.1rem;
+      }
+    .navbar-heading {
+        width: 0;
+        height: 0;
+      }
+  }

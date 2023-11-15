@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" type="text/css" href="src/css/style.css" />
+    <title>Virtual IoT Lab DEI</title>
+    <link
+      rel="icon"
+      href="https://www.vlab.co.in/images/logo.jpg"
+      type="image/x-icon"
+    />
+  </head>
+  <body>
+    <header id="header">
+      <button class="menu-btn" id="head-btn" onclick="dispmenu()">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+      </button>
+
+      <div class="left-head-main">
+        <div class="left-head-logo">
+          <img src="https://www.vlab.co.in/images/logo.jpg" />
+        </div>
+      </div>
+    </header>
+    <div class="navigation-bar">
+      <a href="../../index.html">Home</a>
+    </div>
+    <section class="csection" id="csec">
+      <nav class="side-nav" id="navbar">
+        <div class="nav-element">
+          <a href="index.html">Aim</a>
+        </div>
+        <div class="nav-element">
+          <a href="theory.html">Theory</a>
+        </div>
+        <div class="nav-element">
+          <a href="objective.html">Objective</a>
+        </div>
+        <div class="nav-element">
+          <a href="pretest.html">Pretest</a>
+        </div>
+        <div class="nav-element">
+          <a href="procedure.html">Procedure</a>
+        </div>
+        <div class="nav-element">
+          <a href="./Simulation 1/ledsim.html">Simulation</a>
+        </div>
+        <div class="nav-element">
+          <a href="posttest.html"><span class="cp">Posttest</span></a>
+        </div>
+        <div class="nav-element">
+          <a href="references.html">References</a>
+        </div>
+        <div class="nav-element">
+          <a href="feedback.html">Feedback</a>
+        </div>
+      </nav>
+      <main class="main-section" id="main-sec ">
+        <div class="heading">
+          <h1>Posttest</h1>
+        </div>
+        <div class="des" id="des">
+          <p class="pretest">
+            <strong
+              >What will be the zeroes,poles and gain of : $${ \frac{5s +
+              4}{3s^2 + 1s - 2} }$$</strong
+            >
+          </p>
+          <input type="radio" name="post1" id="q1o1" value="1" />
+          <label for="q1o1"
+            ><p id="post11" class="test">
+              a.) z = 0.8; p = -1,-0.67; k = 1.33
+            </p></label
+          >
+          <br />
+          <input type="radio" name="post1" id="q1o2" value="2" />
+          <label for="q1o2"
+            ><p id="post12" class="test">
+              b.)z = -0.8; p = -1,-0.67; k = 1.33
+            </p></label
+          >
+          <br />
+          <input type="radio" name="post1" id="q1o3" value="3" />
+          <label for="q1o3"
+            ><p id="post13" class="test">
+              c.) z = 0.8; p = -1,-0.67; k = 1.67
+            </p></label
+          >
+          <br />
+          <input type="radio" name="post1" id="q1o4" value="4" />
+          <label for="q1o4"
+            ><p id="post14" class="test">
+              d.) z = -0.8; p = -1,0.67; k = 1.67
+            </p></label
+          >
+          <p class="pretest">
+            <strong>What will be the transfer function with:</strong>
+            <em>Zeroes = 1 + 2i, 1 - 2i; Poles = 3,2; Gain = 5</em>
+          </p>
+          <input type="radio" name="post2" id="q2o1" value="1" />
+          <label for="q2o1"
+            ><p id="post21" class="test pretest">
+              a.) $${ \frac{5s^2 - 10s + 25}{1s^2 - 5s + 6} }$$
+            </p></label
+          >
+          <br />
+          <input type="radio" name="post2" id="q2o2" value="2" />
+          <label for="q2o2"
+            ><p id="post22" class="test pretest">
+              b.) $${ \frac{1s^2 - 5s + 6}{5s^2 - 10s + 25}}$$
+            </p></label
+          >
+          <br />
+          <input type="radio" name="post2" id="q2o3" value="3" />
+          <label for="q2o3"
+            ><p id="post23" class="test pretest">
+              c.) $${ \frac{1s^2 + 5s + 6}{5s^2 - 10s + 25}}$$
+            </p></label
+          >
+          <br />
+          <input type="radio" name="post2" id="q2o4" value="4" />
+          <label for="q2o4"
+            ><p id="post24" class="test pretest">
+              d.) $${ \frac{5s^2 + 10s + 25}{1s^2 + 5s + 6}}$$
+            </p></label
+          >
+          <button id="input_button" onclick="postquiz()">Submit</button>
+          <p id="preresult"></p>
+        </div>
+      </main>
+    </section>
+    <footer>
+      <div class="footer">
+        <div class="foot1">
+          <div class="fheading">
+            <h4>Suggested :</h4>
+          </div>
+          <div class="fdes">
+            <a href="https://www.dei.ac.in/dei/"
+              >Dayalbagh Educational Institute</a
+            >
+            <a href="https://thenameispriyam.github.io/iot-club/"
+              >IoT Initiative</a
+            >
+          </div>
+        </div>
+        <div class="foot2">
+          <div class="fheading">
+            <h4>Contact Us :</h4>
+          </div>
+          <div class="fdes">
+            <p>Phone: General Information</p>
+            <p>0562-2801545, 0562-2801226</p>
+            <p>Email: admin@dei.ac.in</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script type="text/javascript" src="src/js/main.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=default"></script>
+  </body>
+</html>
