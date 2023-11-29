@@ -1,0 +1,293 @@
+.loader {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  z-index: 1;
+  width: 120px;
+  height: 120px;
+  margin: -76px 0 0 -76px;
+  border: 16px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 16px solid #3498db;
+  -webkit-animation: spin 2s linear infinite;
+  animation: spin 2s linear infinite;
+}
+
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.red {
+  color: red;
+}
+
+.orange {
+  color: orange;
+}
+
+.green {
+  color: green;
+}
+
+.lined {
+  border-style: solid;
+  border-width: 2px;
+  border-color: #bbb;
+}
+
+.no-show {
+  display: none;
+}
+
+.legend {
+  list-style: none;
+  display: inline;
+}
+
+.legend-common::before {
+  content: "• ";
+  font-size: 200%;
+  vertical-align: middle;
+}
+
+.legend-red::before {
+  color: red;
+}
+
+.legend-orange::before {
+  color: orange;
+}
+
+.legend-green::before {
+  color: green;
+}
+
+.tool-tip {
+  position: relative;
+  cursor: pointer;
+}
+
+.tooltip-text {
+  visibility: hidden;
+  width: 200px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+
+  /* Position the tooltip */
+  position: absolute;
+  z-index: 1;
+  bottom: 100%;
+  left: 50%;
+  margin-left: -60px; /* Use half of the width (120/2 = 60), to center the tooltip */
+}
+
+.tool-tip:hover .tooltip-text {
+  visibility: visible;
+}
+
+.link {
+  text-decoration: underline;
+}
+
+.time-stamp {
+  color: #2c99ce;
+}
+
+.card-header {
+  background-color: #ffffff;
+  color: green;
+  border: 1px solid #bbbbbb;
+}
+
+.card-header:hover {
+  cursor: pointer;
+  background-color: #ffffc2;
+}
+
+.issue {
+  background-color: #ffffff;
+  color: red;
+  border: 1px solid #bbbbbb;
+}
+
+/* Card */
+
+.card {
+  background: #fff;
+  border-radius: 2px;
+  display: inline-block;
+  width: 98%;
+  margin: 1rem;
+  padding: 2rem;
+  position: relative;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+}
+
+.card-title {
+  font-size: 1.5rem;
+  padding: 1rem;
+  font-weight: 700;
+  color: black;
+}
+
+.tabs {
+  overflow: hidden;
+  box-shadow: 0 4px 4px -2px rgba(0, 0, 0, 0.5);
+  border-radius: 8px;
+  width: 95%;
+  margin: auto;
+}
+.tab {
+  width: 100%;
+  color: white;
+  overflow: hidden;
+  margin-bottom: -8px;
+}
+.tab-label {
+  display: flex;
+  justify-content: space-between;
+  padding: 1em;
+  background: #2c99ce;
+  font-weight: bold;
+  cursor: pointer;
+  /* Icon */
+}
+.tab-label:hover {
+  background: #22759f;
+}
+.tab-label::after {
+  content: "\276F";
+  width: 1em;
+  height: 1em;
+  text-align: center;
+  transition: all 0.35s;
+}
+.tab-content {
+  max-height: 0;
+  padding: 0 1em;
+  color: #808080;
+  background: white;
+  transition: all 0.35s;
+}
+.tab-close {
+  display: flex;
+  justify-content: flex-end;
+  padding: 1em;
+  font-size: 0.75em;
+  background: #2c99ce;
+  cursor: pointer;
+}
+
+.cb {
+  position: absolute;
+  opacity: 0;
+  z-index: -1;
+}
+
+.tab-close:hover {
+  background: #22759f;
+}
+input:checked + .tab-label {
+  background: #22759f;
+}
+input:checked + .tab-label::after {
+  transform: rotate(90deg);
+}
+input:checked ~ .tab-content {
+  max-height: 80vh;
+  padding: 1em 2em 2em 2em;
+  overflow-y: scroll;
+}
+
+.data-table {
+  width: 100%;
+  table-layout: fixed;
+}
+
+.table-cell {
+  padding: 5px 0px;
+  vertical-align: middle;
+  text-align: left;
+}
+
+.eslint-message {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-right: 10%;
+}
+
+.table-row {
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.status-chip {
+  padding: 5px 10px;
+  border-radius: 50px;
+  display: inline-flex;
+  width: 4.5rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.background-warning {
+  background: #f0ad4e;
+  color: #ffffff;
+}
+
+.background-error {
+  background: #d9534f;
+  color: #ffffff;
+}
+
+/* panel */
+.panel {
+  background: #fff;
+  border-radius: 2px;
+  display: inline-block;
+  width: 100%;
+  margin: 1rem;
+  padding: 2rem;
+  position: relative;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+}
+
+.panel-label {
+  font-size: 1.3rem;
+  font-weight: bold;
+  margin-top: 1rem;
+}
+
+
+.collapse-icon {
+  /* top-right */
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 3rem 6rem 0 0;
+  cursor: pointer;
+}
+
+.small-btn {
+  margin-top: 1rem;
+  height: 2rem;
+  font-size: 1rem;
+  padding: 0.2rem 0.5rem;
+  border-radius: 10px;
+}

@@ -1,0 +1,417 @@
+.text-container{
+  border: 2px solid rgb(146, 146, 146);
+  width: 520px;
+  height: 480px;
+  position: relative;
+  top: 2px;
+  border-radius: 8px;
+  
+}
+#Code-slave{
+  display: none;
+  padding: 20px;
+  width: 27vw;
+  height: 55vh;
+  resize: none;
+  position: relative;
+  top: -450px;
+  right: 0px;
+  
+}
+textarea{
+  border-radius: 8px;
+  outline: none;
+  border: none;
+  color: green;
+}
+
+#arduinoCode{
+  padding: 20px;
+  width: 27vw;
+  height: 55vh;
+  resize: none;
+}
+
+h1{
+  background-color: beige;
+  margin: none;
+}
+a{
+  cursor: pointer;
+}
+  
+header{
+  height: 10vh;
+  border-bottom:4px solid cadetblue ;
+}
+  
+header h2{
+  color: cadetblue;
+  display: inline-block;
+}
+  
+body{
+  height: 100vh;
+  width: 100vw;
+  margin: 0;
+  
+  overflow: hidden;
+}
+
+.p-head {
+ 
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+#pagechanger {
+  border: none;
+  color: cadetblue;
+  font-size: 20px;
+  outline: none;
+  position: relative;
+  top: 2.5vh;
+}
+
+#pagechanger:hover{
+  cursor: pointer;
+}
+
+.exp-changer {
+  display: flex;
+  justify-content: center;
+}
+
+.exp-changer-heading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: grey;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 20px;
+  outline: none;
+  position: relative;
+  top: 2.5vh;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+}
+
+.navbar1{
+  width: 8vw;
+  height: 35px;
+  color: #ffffff;
+  background-color: rgba(4, 59, 79, 0.5);
+  font-size: 1.5vw;
+  border-radius: 0 0 20px 0;
+  font-family: "Raleway",sans-serif;
+  }
+
+  .navbar1 a{
+  margin-left: 10px;
+  color: #fff;
+  text-decoration: none;
+  }
+
+  .navbar1 a:hover{
+  text-decoration: none;
+  }
+
+
+.navbar2{
+  width: 8vw;
+  height: 35px;
+  color: #ffffff;
+  background-color: rgba(4, 59, 79, 0.5);
+  font-size: 1.5vw;
+  border-radius: 0 0 0 20px;
+  font-family: "Raleway",sans-serif;
+}
+  
+.navbar2 a{
+  margin-left: 10px;
+  color: #fff;
+  text-decoration: none;
+}
+  
+.navbar2 a:hover{
+  text-decoration: none;
+}
+
+
+/* SIMULATION TIMER DISPLAY START */
+
+.timerDisplay {
+  position: relative;
+  width: 15%;
+  height: 35px;
+  display: flex;
+  justify-content: center;
+  color: #ffffff;
+  background-color: rgba(4, 59, 79, 0.5);
+  font-size: 1.4rem;
+  border-radius: 0 0 20px 20px;
+  font-family: "Roboto mono", monospace;
+  }
+
+.timerbuttons {
+  width: 90%;
+  margin: 60px auto 0 auto;
+  display: flex;
+  justify-content: space-around;
+}
+.timerbuttons button {
+  width: 120px;
+  height: 45px;
+  background-color: #205e94;
+  color: #ffffff;
+  border: none;
+  font-size: 18px;
+  border-radius: 5px;
+  cursor: pointer;
+  outline: none;
+}
+
+/* TIMER DISPLAY END */
+
+
+.container {
+  height: 82vh;
+  width: 100%;
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: #F4F5F7;
+}
+.nofled {
+  height: 80vh;
+  width: 100vw;
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+.nofledHead {
+  width: 100%;
+  height: 20vh;
+  margin-top: 3.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.nofledBoxContainer {
+  width: 100%;
+  height: 10vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.leds {
+  background-color: rgb(46, 64, 92, 0.9);
+  color: white;
+  width: 6.5rem;
+  text-decoration: none;
+  margin: 0 10px 0 10px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: scale(1);
+  transition: all ease-out 0.4s;
+}
+.leds:hover {
+  cursor: pointer;
+  background-color: rgb(46, 64, 92, 1);
+  transform: scale(1.1);
+  transition: all ease-out 0.4s;
+}
+
+.separator {
+  border-radius: 20px;
+  height: 73vh;
+ 
+  width: 8px;
+  background-color: rgba(4, 59, 79, 0.5);
+  transition: all 0.4s ease-in;
+  transform: scale(1.1);
+} 
+
+
+.if-vid {
+  width: 100%;
+  height: 82vh;
+  padding: 3px;
+  /* background-color: rgba(4, 59, 79, 0.1); */
+  /* border: 3px solid rgba(4, 59, 79, 0.3); */
+  border-radius: 10px;
+ /* overflow: scroll;*/
+  
+}
+
+.interfacing {
+  margin-left: 400px;
+  width: 100;
+  /* max-width: 700px; */
+  height: 100%;
+  max-height: 700px;
+ 
+  /* border: 3px solid rgba(4, 59, 79, 0.3); */
+  border-radius: 10px;
+  position: relative;
+}
+
+.interfacing img {
+  transition: all 0.4s ease;
+  width: 1150px;
+  margin-left: -400px;
+  height: auto;
+}
+#pushbutton {
+  background-color: rgba(232, 11, 96, 0);
+  position: absolute;
+  z-index: 5;
+  width: 23px;
+  border: 5px;
+  height: 23px;
+  margin-left: -747px;
+  margin-top: 409px;   
+  
+  cursor: pointer;
+}
+
+#pushbutton2 {
+  background-color: rgba(239, 239, 18, 0);
+  position: absolute;
+  z-index: 5;
+  width: 25px;
+  border: none;
+  height: 30px;
+  margin-left: 362px;
+  margin-top: -426px;
+  cursor: pointer;
+}
+
+#buzzerpushbutton {
+  background-color: rgba(255, 0, 0, 0);
+  position: absolute;
+  z-index: 5;
+  width: 25px;
+  border: none;
+  height: 25px;
+  margin-left: 389px;
+  margin-top: -158px;
+  cursor: pointer;
+}
+
+.code {
+  width: 90vw;
+  height: 80vh;
+  padding: 3px;
+  /* border: 3px solid rgba(4, 59, 79, 0.3); */
+  border-radius: 10px;
+  /* background-color: rgba(4, 59, 79, 0.1); */
+}
+
+.startStop h2{
+  position: fixed;
+  bottom: 9px;
+  height:26px;
+  margin: 5px 42px;
+  right: 110px;
+  background-color: #009C4E;
+  color: #fff;
+  /* text-transform: uppercase; */
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  padding: 5px 30px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+
+
+.code-head {
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  margin-bottom: 14px;
+}
+
+#codeInput {
+  width: 700px;
+  height: 60vh;
+ 
+  border-radius: 10px;
+  border: 1px solid rgba(4, 59, 79, 0.2);
+}
+
+
+
+
+@media screen and (max-width: 1000px) {
+  .navbar1 {
+    width: 14vw;
+    height: 27px;
+    font-size: 1.1rem;
+    }
+
+  .navbar2 {
+    width: 17vw;
+    height: 27px;
+    font-size: 1.1rem;
+    }
+  .navbar-heading {
+      width: 0;
+      height: 0;
+    }
+}
+
+/* Dropdown Button */
+.dropbtn {
+  background-color: #04AA6D;
+  color: white;
+  padding: 7px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 100px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: #ddd;}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {display: block;}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropbtn {background-color: #3e8e41;}

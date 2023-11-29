@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+		<meta content="" name="description"/>
+		<meta content="" name="author"/>
+		
+		
+		<!-- For iPhone -->
+		<meta name="msapplication-TileColor" content="#4076e0">
+		<!-- Chrome, Firefox OS and Opera -->
+		<meta name="theme-color" content="#4076e0">
+		<!-- Windows Phone -->
+		<meta name="msapplication-navbutton-color" content="#4076e0">
+		<title>Virtual Labs</title>
+		<link rel="shortcut icon" href="./assets/images/favicon.ico" />
+		<link rel="stylesheet" href="./assets/css/bootstrap.min.css" />
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/4.0.0/github-markdown.min.css" integrity="sha512-Oy18vBnbSJkXTndr2n6lDMO5NN31UljR8e/ICzVPrGpSud4Gkckb8yUpqhKuUNoE+o9gAb4O/rAxxw1ojyUVzg==" crossorigin="anonymous" />
+		<link
+		  href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Raleway&display=swap"
+		  rel="stylesheet"
+		/>
+		<link
+		  rel="stylesheet"
+		  href="./assets/fonts/font-awesome-4.7.0/css/font-awesome.min.css"
+		/>
+		<link rel="stylesheet" href="./assets/css/github-markdown.min.css" />
+		<link rel="stylesheet" href="./assets/css/vlabs-style.css" />
+		<link rel="stylesheet" href="./assets/katex_assets/katex.min.css" />
+		
+		<script src="./assets/js/jquery-3.4.1.slim.min.js"></script>
+		<script
+		  src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"
+		  integrity="sha384-q2kxQ16AaE6UbzuKqyBE9/u/KzioAlnx2maXQHiDX9d4/zp8Ok3f+M7DPm+Ib6IU"
+		  crossorigin="anonymous"
+		></script>
+		<script
+		  src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.min.js"
+		  integrity="sha384-pQQkAEnwaBkjpqZ8RU1fF1AKtTcHJwFl3pblpTlHXybJjHpMYo79HY3hIi4NKxyj"
+		  crossorigin="anonymous"
+		></script>
+		<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/virtual-labs/virtual-style@0.0.6-b/css/style.min.css">
+		<link rel="stylesheet" href="plugins/tool-performance/css/main.css">
+	</head>
+
+	<body> 
+		<div>
+			<div class="columns is-mobile is-centered is-vcentered">
+				<div class="column is-2">
+					<a href="http://vlab.co.in" class="navbar-brand">
+						<img src="./assets/images/vlabs-color-small-moe.jpg" alt="vlabs logo" class="vlabs-logo">
+					</a>
+				</div>
+				<div class="column is-8 has-text-centered">
+					<div class="title is-2">
+						<h2 id="experiment-name">Experiment name</h2>
+
+					</div>
+				</div>
+				<div class="column is-2">
+				</div>
+			</div>
+		</div>
+
+		<div id="loader" class="loader">
+		</div>
+
+		<div class="columns is-mobile is-centered is-flex">
+			<div class="column has-text-centered">
+				<div class="title">Pagewise Performance Summary</div>
+			</div>
+		</div>
+
+		<div class="columns is-mobile is-centered is-vcentered is-flex">
+			<div class="column has-text-centered is-3 is-size-4 time-stamp" id="timeStamp">
+			</div>
+			<div class="column has-text-centered is-6">
+				<button class="v-button" id="newReport">Refresh Report</button>
+			</div>
+			<div class="column has-text-centered is-3">
+				<ul class="legend is-flex if-flex-wrap is-justify-content-space-between">
+					<li class="legend-common legend-red is-size-5">Critical</li>
+					<li class="legend-common legend-orange is-size-5">Needs Work</li>
+					<li class="legend-common legend-green is-size-5">Good</li>
+				</ul>
+			</div>
+		</div>
+
+		<div class="columns is-mobile is-centered">
+			<div class="column has-text-centered">
+				<div class="v-tabs">
+					<ul>
+						<li   data-url="index.html"   class="is-active" >
+							<a>
+								<span class="is-size-5">Aim</span>
+							</a>
+						</li>
+						<li   data-url="theory.html"  >
+							<a>
+								<span class="is-size-5">Theory</span>
+							</a>
+						</li>
+						<li   data-url="pretest.html"  >
+							<a>
+								<span class="is-size-5">Pretest</span>
+							</a>
+						</li>
+						<li   data-url="procedure.html"  >
+							<a>
+								<span class="is-size-5">Procedure</span>
+							</a>
+						</li>
+						<li   data-url="simulation.html"  >
+							<a>
+								<span class="is-size-5">Simulation</span>
+							</a>
+						</li>
+						<li   data-url="posttest.html"  >
+							<a>
+								<span class="is-size-5">Posttest</span>
+							</a>
+						</li>
+						<li   data-url="references.html"  >
+							<a>
+								<span class="is-size-5">References</span>
+							</a>
+						</li>
+						<li   data-url="feedback.html"  >
+							<a>
+								<span class="is-size-5">Feedback</span>
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+
+
+		<!--<div class="columns is-mobile is-centered" id="gsc">-->
+			<!--<div class="column has-text-centered" id="gscRes">-->
+				<!--<div class="card is-fullwidth">-->
+					<!--<header class="card-header card-toggle is-flex is-justify-content-space-between" id="card-toggle">-->
+						<!--<a class="card-header-title" id="gscStatus"></a>-->
+						<!--<a class="card-header-icon icon" id="gscIcon">-->
+							<!--<i class="fa fa-angle-down"></i>-->
+						<!--</a>-->
+					<!--</header>-->
+					<!--<div class="card-content is-hidden">-->
+						<!--<div class="content" id="gscIssues">-->
+						<!--</div>-->
+					<!--</div>-->
+				<!--</div>-->
+			<!--</div>-->
+		<!--</div>-->
+
+		<div class="columns is-centered" id="lighthouse">
+			<div class="column has-text-centered lined" id="mobile">
+			</div>
+			<div class="column has-text-centered lined" id="desktop">
+			</div>
+		</div>
+
+		<div class="is-size-5">
+			<b>*</b>NOTE: The scores may slightly vary between       the detailed report and the given summary due to the use of different APIs for each. <a href='https://www.debugbear.com/blog/why-is-my-lighthouse-score-different-from-pagespeed-insights' target='_blank'>Learn more</a>.
+		</div>
+
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js" integrity="sha512-bZS47S7sPOxkjU/4Bt0zrhEtWx0y0CRkhEp8IckzK+ltifIIE9EMIMTuT/mEzoIMewUINruDBIR/jJnbguonqQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+		<script type="module" src="plugins/tool-performance/js/main.js"></script>
+	</body>
+</html>
