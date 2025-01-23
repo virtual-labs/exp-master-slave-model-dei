@@ -2,37 +2,37 @@
   "version": 2.0,
   "questions": [
     {
-      "question": "This is a Sample Question 1?",
+      "question": "Which line in the I2C protocol is used to carry the clock signal?",
       "answers": {
-        "a": "answer1",
-        "b": "answer2",
-        "c": "answer3",
-        "d": "answer4"
+        "a": "SDA",
+        "b": "SCL",
+        "c": "VCC",
+        "d": "GND"
       },
       "explanations": {
-        "a": "Explanation 1  <a href='www.google.com'>here</a>",
-        "b": "Explanation 2",
-        "c": "Explanation 2",
-        "d": "Explanation 2"
+        "a": "SDA is the data line, not the clock line.",
+        "b": "SCL is the clock line, responsible for synchronizing communication between the master and slave.",
+        "c": "VCC is the power line, not involved in data transfer.",
+        "d": "GND is the ground line, not involved in data transfer."
       },
-      "correctAnswer": "a",
+      "correctAnswer": "b",
       "difficulty": "beginner"
     },
     {
-      "question": "This is a Sample Question 2?",
+      "question": "What happens if two I2C devices are assigned the same address?",
       "answers": {
-        "a": "answer1",
-        "b": "answer2",
-        "c": "answer3",
-        "d": "answer4"
+        "a": "The communication will proceed normally",
+        "b": "Data will be corrupted or lost",
+        "c": "Only the first device will respond",
+        "d": "The master will reset the bus"
       },
       "explanations": {
-        "a": "Explanation 1  <a href='www.google.com'>here</a>",
-        "b": "Explanation 2",
-        "c": "Explanation 2",
-        "d": "Explanation 2"
+        "a": "Devices with the same address will cause a conflict, not normal communication.",
+        "b": "When two devices have the same address, data corruption or loss can occur.",
+        "c": "The master device will not know which slave to communicate with, causing a conflict.",
+        "d": "The master will not reset the bus in case of an address conflict."
       },
-      "correctAnswer": "c",
+      "correctAnswer": "b",
       "difficulty": "beginner"
     }
   ]
