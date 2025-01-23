@@ -1,0 +1,39 @@
+{
+  "version": 2.0,
+  "questions": [
+    {
+      "question": "Which line in the I2C protocol is used to carry the clock signal?",
+      "answers": {
+        "a": "SDA",
+        "b": "SCL",
+        "c": "VCC",
+        "d": "GND"
+      },
+      "explanations": {
+        "a": "SDA is the data line, not the clock line.",
+        "b": "SCL is the clock line, responsible for synchronizing communication between the master and slave.",
+        "c": "VCC is the power line, not involved in data transfer.",
+        "d": "GND is the ground line, not involved in data transfer."
+      },
+      "correctAnswer": "b",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "What happens if two I2C devices are assigned the same address?",
+      "answers": {
+        "a": "The communication will proceed normally",
+        "b": "Data will be corrupted or lost",
+        "c": "Only the first device will respond",
+        "d": "The master will reset the bus"
+      },
+      "explanations": {
+        "a": "Devices with the same address will cause a conflict, not normal communication.",
+        "b": "When two devices have the same address, data corruption or loss can occur.",
+        "c": "The master device will not know which slave to communicate with, causing a conflict.",
+        "d": "The master will not reset the bus in case of an address conflict."
+      },
+      "correctAnswer": "b",
+      "difficulty": "beginner"
+    }
+  ]
+}

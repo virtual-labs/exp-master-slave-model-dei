@@ -1,0 +1,444 @@
+html {
+  overflow-y: auto;
+}
+
+.svc-rating-display{
+  display:flex;
+  flex-direction: column;
+  margin-right: 40px ;
+  margin-bottom: 17px;
+  align-items: center ;
+}
+
+.vl-rating-display {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  padding: 0px 10px;
+  margin-top: -15px; /* Adjust this value as needed */
+}
+.list-of-experiments-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+  align-items: center;
+  overflow: hidden;
+  flex: 0 0 1%; /*Adjust this value to decrease the width*/
+}
+
+.list-of-experiments-container > div{
+  margin: 1px;
+}
+.list-of-experiments-display-rating {
+  position: relative;
+  top: -10px;
+  left: 20px;
+}
+
+.vlabs-page {
+  height: 100vh;
+  overflow-x: hidden;
+}
+
+.vlabs-header {
+  border-bottom: 8px solid #ff6600;
+  font-family: "Raleway", sans-serif;
+}
+
+.vlabs-page-main {
+  font-size: 1rem;
+  font-family: "Open Sans", sans-serif;
+}
+
+.vlabs-lab-name {
+  font-size: 1.7rem;
+}
+
+.vlabs-footer {
+  font-size: 14px;
+  background: rgb(17, 17, 17);
+  font-family: "Raleway", sans-serif;
+}
+
+.vlabs-footer-sect-name {
+  border-width: 0.15rem;
+  border-style: solid;
+  border-image: linear-gradient(to right, #3ec1d5 20%, #555 0%) 0% 0% 100% 0%;
+}
+
+.vlabs-lab-name {
+  color: #2c99ce;
+}
+
+.vlabs-page-content {
+  font-size: 1.2rem;
+  overflow-y: hidden;
+  font-family: "Raleway", sans-serif;
+}
+
+.social-links > a {
+  color: #fff;
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+}
+
+.nav-menu a,
+.simulation-header .dropdown .nav-menu a {
+  color: #3e6389;
+}
+
+.nav-menu .tasks a,
+.simulation-header .dropdown .nav-menu .tasks a {
+  color: #5c5c5c;
+}
+
+.nav-menu a.current-item,
+.simulation-header .dropdown .nav-menu a.current-item {
+  color: #ff6600;
+}
+
+.nav-menu .tasks,
+.simulation-header .dropdown .nav-menu .tasks {
+  font-size: 1rem;
+}
+
+.nav-menu,
+.simulation-header .dropdown .nav-menu {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.nav-menu-body {
+  justify-content: center;
+}
+
+.sidebar .nav-menu-body {
+  justify-content: start;
+}
+
+.sidebar {
+  /* border-right: 2px dotted #89a7c4; */
+  border-right: thin solid #e8e8e8;
+  overflow: hidden;
+  box-sizing: content-box;
+}
+
+.popupmenu .vlabs-logo {
+  height: 2.5rem;
+}
+
+@media (max-width: 991px) {
+  .sidebar {
+    max-height: 6000px;
+    transition: max-height 1s ease-in;
+    flex-wrap: nowrap;
+    overflow-y: auto;
+  }
+  .vlabs-logo {
+    height: 3rem;
+  }
+
+  .simulation-header {
+    display: none !important;
+  }
+}
+
+@media (min-width: 992px) {
+  .vlabs-hidden {
+    display: none !important;
+  }
+  #toggle-menu-float-button {
+    display: none;
+  }
+  .bug-report-mobile {
+    display: none;
+  }
+}
+
+.vlabs-header a {
+  margin: 0 1rem;
+  padding: 0.5rem 1rem;
+  color: #2c98cd;
+}
+
+.vlabs-header #headerNavbar a:hover {
+  background: #77bb41;
+  color: #fff;
+  border-radius: 10px;
+}
+
+.vlabs-header #headerNavbar a {
+  border-radius: 10px;
+  transition: 0.3s;
+}
+
+.breadcrumbs,
+.breadcrumbs a,
+.breadcrumbs span {
+  font-size: 1.6rem;
+  color: #337ab7;
+}
+
+.page-name {
+  color: #337ab7;
+}
+
+/*pre-test and post-test page styling fix*/
+
+.answers {
+  font-size: 1rem;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+}
+
+.question {
+  font-weight: 900;
+}
+
+/* feedback */
+#feedback-btn {
+  color: #2c99ce;
+  border-color: #2c99ce;
+}
+
+/* to override markdown styling */
+.markdown-body {
+  font-family: "Raleway", sans-serif;
+  color: #000000;
+  text-align: justify;
+}
+
+/* to fix the  extended lines*/
+.markdown-body table tr {
+  border-top: 0;
+}
+
+h1,
+h2,
+h3 {
+  color: #2c99ce;
+}
+
+h2 {
+  padding-top: 2rem;
+  padding-bottom: 1rem;
+}
+
+h3 {
+  font-size: 1.1rem;
+  color: #333333;
+  padding-top: 1rem;
+  text-decoration: underline;
+}
+
+/* for ds experiments - video iframes */
+iframe {
+  width: 100%;
+  height: calc(100vw / 3);
+}
+
+.simulation-container {
+  padding: 0px;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+}
+
+.responsive-iframe {
+  flex: 1;
+}
+
+/* Style the buttons that are used to open and close the accordion panel */
+.accordion {
+  display: none;
+  margin-left: 20px;
+  color: #337ab7;
+  text-decoration: underline;
+  text-align: right;
+}
+
+/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+/* .active,
+.accordion:hover {
+} */
+
+/* Style the accordion panel. Note: hidden by default */
+.panel {
+  display: none;
+  background-color: #eee;
+  color: #444;
+  padding: 18px;
+  width: 100%;
+  text-align: left;
+  border: none;
+  outline: none;
+  transition: 0.4s;
+}
+
+/* Customize the label (the container) */
+.container {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* .form-check input[type="checkbox"] {
+  width: 1rem;
+  height: 1rem;
+  margin: 5px 10px 0px 0px;
+} */
+
+/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+  }
+}
+
+#difficulty-container,
+.form-check {
+  display: flex;
+  align-items: center;
+}
+
+.form-check input[type="checkbox"] {
+  margin: 0.5em;
+  transform: scale(1.5);
+}
+
+.fix-spacing > * {
+  padding-top: 0;
+  margin-top: 1em;
+}
+
+#toggle-menu-float-button {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  z-index: 1;
+  padding: 0.8em 1em;
+  background: rgba(255, 255, 255, 0.9);
+  cursor: pointer;
+  border-radius: 0.5em;
+  color: #fff;
+  border: 3px solid rgba(0, 174, 255, 0.274);
+  transform: scale(0.9);
+}
+
+.toggle-menu-icon {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(0, 0, 0, 0.5)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+  height: 30px;
+  width: 30px;
+}
+
+.btn-close {
+  box-sizing: content-box;
+  width: 1em;
+  height: 1em;
+  padding: 0.25em 0.25em;
+  color: #000;
+  background: transparent
+    url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23000'%3e%3cpath d='M.293.293a1 1 0 011.414 0L8 6.586 14.293.293a1 1 0 111.414 1.414L9.414 8l6.293 6.293a1 1 0 01-1.414 1.414L8 9.414l-6.293 6.293a1 1 0 01-1.414-1.414L6.586 8 .293 1.707a1 1 0 010-1.414z'/%3e%3c/svg%3e")
+    center/1em auto no-repeat;
+  border: 0;
+  border-radius: 0.25rem;
+  opacity: 0.5;
+}
+
+.tools {
+  top: 50%;
+  transform: translate(0%, 25%);
+}
+
+.simulation-header .navbar-brand .vlabs-logo {
+  height: 3rem;
+}
+
+.simulation-header h1,
+.simulation-header h2 {
+  border: none;
+  font-size: 1.5rem;
+  padding: 0;
+  flex: 2;
+  text-align: center;
+
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  overflow-wrap: break-word;
+}
+
+.simulation-header .dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.simulation-header .dropdown .backdrop {
+  position: absolute;
+  width: 100vw;
+  background-color: rgba(0, 0, 0, 0.2);
+  height: 100vh;
+}
+
+.simulation-header .dropdown .nav-menu {
+  width: fit-content;
+  background-color: #fff;
+  margin-top: 8px;
+  padding: 10px;
+  box-shadow: 0px 8px 14px 0px rgba(0, 0, 0, 0.2);
+  font-family: "Open Sans", sans-serif;
+  max-height: 80%;
+  overflow: auto;
+}
+
+.simulation-header .dropdown .nav-menu-body {
+  justify-content: flex-start;
+}
+
+.simulation-header .dropdown .vlabs-hidden {
+  display: none;
+}
+
+.expand-1 {
+  flex: 1;
+}
+
+/* Add Button style from virtual styles */
+.v-button {
+  border: none;
+  color: #ffffff;
+  background-color: #288ec8;
+  text-align: center;
+  font-size: 1.05rem;
+  border-radius: 1em;
+  padding: 0.6em 1.2em;
+  cursor: pointer;
+}
+
+.v-button:hover {
+  background-color: #a9a9a9;
+}
+
+.v-button:disabled {
+  background-color: #a9a9a9;
+  cursor: not-allowed;
+}
