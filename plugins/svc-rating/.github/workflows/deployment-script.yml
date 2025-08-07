@@ -1,0 +1,39 @@
+name: Deploy Main Branch
+on:
+  push:
+    branches:
+      - main
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: Setup node
+      uses: actions/setup-node@v2
+      with:
+        node-version: '16'
+        check-latest: true
+
+    - run: |
+        mkdir js
+        cp -rf *.js js/
+        if [ ! -d "images" ]; then
+          mkdir images
+          cp -rf images/*.{svg,jpg,png} images/
+        fi
+        git config --local user.email "admin@vlabs.ac.in"
+        git config --local user.name "vleadadmin"
+        git checkout --orphan gh-pages
+        git reset
+        git add js/* -f
+        git add images/* -f
+        git mv js/* ./ -f
+        git mv images/* ./ -f
+        git commit -m "https://virtual-labs.github.io/${{ github.repository }} click on the link to test your code."
+
+    - uses: ad-m/github-push-action@master
+      with:
+        github_token: ${{ secrets.ORG_OWNER_GITHUB_TOKEN }}
+        force: true
+        branch: gh-pages
