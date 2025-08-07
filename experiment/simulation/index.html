@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Virtual IoT Lab DEI</title>
   <link rel="icon" href="https://www.vlab.co.in/images/logo.jpg" type="image/x-icon" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/codemirror.min.css">
   <link rel="stylesheet" type="text/css" href="src/css/style.css" />
   <style></style>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
@@ -13,65 +14,13 @@
 
   <script>
     $(document).ready(function () {
-      $("#master").click(function () {
-        $("#Code-slave").hide();
-        $("#arduinoCode").show();
-      });
-    });
-    $(document).ready(function () {
-      $("#slave").click(function () {
-        $("#Code-slave").show();
-      });
-    });
-  </script>
-  <header>
-    <div class="exp-changer">
-      <div class="exp-changer-heading">
-        <p class="p-head">IOT Virtual Lab</p>
-      </div>
-    </div>
-  </header>
-
-  <div class="navbar">
-    <div class="navbar1">
-      <a href="../../index.html">Home</a>
-    </div>
-    <div class="timerDisplay" id="simTimer">Simulation Window</div>
-    <div class="navbar2">
-      <a href="../index.html">Go Back</a>
-    </div>
-  </div>
-
-  <div class="container">
-    <div class="if-vid">
-      <p class="p-head">Simulation of establishing master slave model using Arduino and I2C Protocols :</p>
-      <div class="interfacing">
-        <img id="ifimg" src="./src/images/led/led_dis.png" alt="interfacing" />
-        <button id="pushbutton" onclick="changeImage();"></button>
-        <button id="pushbutton2" onclick="changeLedColor();"></button>
-      </div>
-    </div>
-
-
-
-    <div class="separator"></div>
-    <div class="code">
-      <div class="code-head">
-        <p class="p-head">ARDUINO CODE</p>
-      </div>
-      <div class="dropdown">
-        <button class="dropbtn">Code</button>
-        <div class="dropdown-content">
-
-          <a id="master">Master</a>
-          <a id="slave">Slave</a>
-
-        </div>
-      </div>
-      
-<div class="text-container">
-  <textarea id="arduinoCode" readonly>
-//Code for Master Arduino
+      $("#master-tab").click(function () {
+        // Update tab appearance
+        $(".tab-button").removeClass("active");
+        $("#master-tab").addClass("active");
+        
+        // Update code content
+        var masterCode = `//Code for Master Arduino
 
 #include <Wire.h>
 int pushButton = A0;
@@ -88,11 +37,17 @@ void loop()
   Wire.write(x);
   Wire.endTransmission();
   delay(500);
-}          
-  </textarea>
-        <!-- code for slave -->
-        <textarea id="Code-slave" readonly>
-//Code for Slave Arduino
+}`;
+        editor.setValue(masterCode);
+      });
+      
+      $("#slave-tab").click(function () {
+        // Update tab appearance
+        $(".tab-button").removeClass("active");
+        $("#slave-tab").addClass("active");
+        
+        // Update code content
+        var slaveCode = `//Code for Slave Arduino
 
 #include <Wire.h>
 int pinLed=13;
@@ -118,23 +73,84 @@ void receiveEvent(int howMany)
     {
       digitalWrite(pinLed,LOW);
     }
-      }
-   </textarea>
-</div>
+      }`;
+        editor.setValue(slaveCode);
+      });
+    });
+  </script>
+  <header>
+    <div class="exp-changer">
+      <div class="exp-changer-heading">
+        <p class="p-head">IOT Virtual Lab</p>
+      </div>
+    </div>
+  </header>
 
+  <div class="container">
+    <div class="if-vid">
+      <p class="p-head">Simulation of establishing master slave model using Arduino and I2C Protocols :</p>
+      <div class="interfacing">
+        <img id="ifimg" src="./src/images/led/led_dis.png" alt="interfacing" />
+        <button id="pushbutton" onclick="changeImage();"></button>
+        <button id="pushbutton2" onclick="changeLedColor();"></button>
+      </div>
+    </div>
 
+    <div class="separator"></div>
+    
+    <div class="code">
+      <div class="code-head"><p class="p-head">ARDUINO CODE</p></div>
+      <div class="code-tabs">
+        <button class="tab-button active" id="master-tab">Master.ino</button>
+        <button class="tab-button" id="slave-tab">Slave.ino</button>
+      </div>
+      <div>
+        <form action="" method="POST">
+          <textarea id="arduinoCode" readonly>
+//Code for Master Arduino
 
+#include <Wire.h>
+int pushButton = A0;
+int x = 0;
+void setup()
+{
+  Wire.begin();
+  pinMode(pushButton, INPUT);
+}
+void loop()
+{
+  Wire.beginTransmission(1);
+  x = digitalRead(pushButton);
+  Wire.write(x);
+  Wire.endTransmission();
+  delay(500);
+}
+          </textarea>
+        </form>
+      </div>
       <div class="code-head startStop">
         <h2 id="pushbuttonPower" onclick="changePower();">
           Start Simulation
         </h2>
-
       </div>
-
     </div>
-
   </div>
-  </div>
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/codemirror.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/mode/clike/clike.js"></script>
+  <script>
+    // Initialize CodeMirror editor in read-only mode with an increased height
+    var editor = CodeMirror.fromTextArea(document.getElementById("arduinoCode"), {
+          mode: "text/x-c++src", // For C++/Arduino syntax highlighting
+          lineNumbers: true, // Show line numbers
+          matchBrackets: true, // Highlight matching brackets
+          theme: "default", // You can change the theme
+          readOnly: "nocursor", // Make the editor read-only
+          tabSize: 4,
+          indentUnit: 4,
+      });
+      
+  </script>
   <script type="text/javascript" src="src/js/main.js"></script>
 </body>
 </html>
