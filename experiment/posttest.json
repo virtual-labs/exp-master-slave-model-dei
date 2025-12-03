@@ -2,38 +2,104 @@
   "version": 2.0,
   "questions": [
     {
-      "question": "Which line in the I2C protocol is used to carry the clock signal?",
+      "question": "What is the working principle of I2C communication?",
       "answers": {
-        "a": "SDA",
-        "b": "SCL",
-        "c": "VCC",
-        "d": "GND"
+        "a": "Single-wire asynchronous communication",
+        "b": "Master–slave communication using clock and data lines",
+        "c": "Parallel data transfer",
+        "d": "Wireless data communication"
       },
-      "explanations": {
-        "a": "SDA is the data line, not the clock line.",
-        "b": "SCL is the clock line, responsible for synchronizing communication between the master and slave.",
-        "c": "VCC is the power line, not involved in data transfer.",
-        "d": "GND is the ground line, not involved in data transfer."
-      },
-      "correctAnswer": "b",
-      "difficulty": "beginner"
+      "difficulty": "intermediate"
     },
     {
-      "question": "What happens if two I2C devices are assigned the same address?",
+      "question": "Which statement correctly compares I2C with SPI and UART?",
       "answers": {
-        "a": "The communication will proceed normally",
-        "b": "Data will be corrupted or lost",
-        "c": "Only the first device will respond",
-        "d": "The master will reset the bus"
+        "a": "I2C uses more wires than SPI",
+        "b": "UART supports multiple slaves like I2C",
+        "c": "I2C uses fewer wires than SPI and supports multiple devices",
+        "d": "SPI is slower than I2C"
       },
-      "explanations": {
-        "a": "Devices with the same address will cause a conflict, not normal communication.",
-        "b": "When two devices have the same address, data corruption or loss can occur.",
-        "c": "The master device will not know which slave to communicate with, causing a conflict.",
-        "d": "The master will not reset the bus in case of an address conflict."
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "Why are pull-up resistors required on SDA and SCL lines?",
+      "answers": {
+        "a": "To increase communication speed",
+        "b": "To keep lines at logic HIGH when idle",
+        "c": "To reduce clock noise",
+        "d": "To protect the microcontroller"
       },
-      "correctAnswer": "b",
-      "difficulty": "beginner"
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "How does the master identify the correct slave?",
+      "answers": {
+        "a": "Using pin numbers",
+        "b": "By matching device frequency",
+        "c": "By calling the slave's unique address",
+        "d": "By detecting voltage levels"
+      },
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "Which of the following is a real-life IoT use case of I2C?",
+      "answers": {
+        "a": "Controlling DC motors in robotics",
+        "b": "Reading temperature sensor data with an OLED display",
+        "c": "Communicating with Wi-Fi routers",
+        "d": "Sending audio signals to speakers"
+      },
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "What happens if two slaves share the same address?",
+      "answers": {
+        "a": "Communication becomes faster",
+        "b": "Both slaves respond causing data collision",
+        "c": "One slave automatically turns off",
+        "d": "Master blocks communication"
+      },
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "How can a slave send data back to the master?",
+      "answers": {
+        "a": "By initiating communication itself",
+        "b": "When master sends a read command",
+        "c": "By generating its own clock pulse",
+        "d": "By using external interrupts"
+      },
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "Why is clock synchronization important in I2C?",
+      "answers": {
+        "a": "It increases voltage stability",
+        "b": "It ensures all devices communicate at the same speed",
+        "c": "It provides wireless synchronization",
+        "d": "It reduces the number of wires"
+      },
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "How does I2C reduce wiring complexity?",
+      "answers": {
+        "a": "Uses a separate wire for each slave",
+        "b": "Uses high-speed serial communication",
+        "c": "Uses only two wires for all devices",
+        "d": "Eliminates the need for ground connection"
+      },
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "Why is I2C preferred in multi-sensor IoT devices?",
+      "answers": {
+        "a": "High speed for large data transfer",
+        "b": "Ability to connect many sensors with minimal pins",
+        "c": "Works only with analog sensors",
+        "d": "Requires no addressing"
+      },
+      "difficulty": "intermediate"
     }
   ]
 }
