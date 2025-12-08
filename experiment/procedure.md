@@ -1,4 +1,4 @@
-## Procedure
+### Procedure for the experiment is as follows:
 
 1. Open the experiment in the virtual lab for establishing a master–slave model using the I2C protocol.  
    Two Arduino boards (Master and Slave) are already connected through SDA and SCL lines, along with power and ground.
