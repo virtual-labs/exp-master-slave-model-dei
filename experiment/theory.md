@@ -1,120 +1,101 @@
-I2C (Inter-Integrated Circuit) is a widely used serial communication protocol especially designed for connecting multiple low-speed peripherals to microcontrollers. It operates on a simple two-wire interface and enables efficient data transfer between devices using Master–Slave architecture. In this experiment, we simulate communication between two Arduino boards using I2C, where one acts as a Master and the other as a Slave.
+## I2C Communication (Inter-Integrated Circuit)
 
-# Arduino Microcontroller in I2C Communication
-## Overview
+I2C is a widely used serial communication protocol designed for connecting multiple low-speed peripherals to microcontrollers. It works on a simple two-wire interface and enables efficient Master–Slave communication.  
+In this experiment, we simulate communication between two Arduino boards using I2C, where one acts as the Master and the other as the Slave.
 
-Arduino boards (like Arduino UNO, Nano) contain built-in hardware support for I2C communication.
+---
 
-SDA (A4) → Serial Data Line
+## Arduino Microcontroller in I2C Communication
 
-SCL (A5) → Serial Clock Line
+### Overview
+Arduino boards (UNO, Nano, etc.) have built-in hardware support for I2C.
+
+- **SDA (A4)** → Serial Data Line  
+- **SCL (A5)** → Serial Clock Line  
 
 These pins allow Arduino to communicate with sensors, displays, EEPROMs, and even other Arduino boards.
 
-## Role in I2C Communication
+### Role in I2C Communication
+- One Arduino acts as the **Master**
+- Another Arduino acts as the **Slave**
+- Master initiates communication and sends data
+- Slave listens for its address and responds
 
-One Arduino acts as the Master
+This setup enables smooth multi-device communication.
 
-Another Arduino acts as the Slave
+---
 
-Master initiates communication and sends commands/data
+## I2C Protocol in Embedded Systems
 
-Slave waits for Master request and responds accordingly
-This allows smooth data transfer in multi-device systems.
+### Key Characteristics
+- Two-wire protocol (**SDA + SCL**)
+- Supports multiple slave devices
+- Each slave has a unique **7-bit or 10-bit address**
+- Synchronous communication (clock from master)
+- Reliable transfer using ACK/NACK
 
-# I2C Protocol in Embedded Systems
-## Key Characteristics
+### Advantages
+- Very few pins required  
+- Ideal for microcontroller-to-microcontroller communication  
+- Supports many devices on one bus  
+- Low power consumption  
 
-Two-wire protocol (SDA + SCL)
+---
 
-Supports multiple slave devices
+## I2C Components
 
-Each slave has a unique 7-bit or 10-bit address
+### Master
+- Controls the clock  
+- Initiates communication  
+- Decides read/write operations  
 
-Synchronous communication (clock provided by master)
+### Slave
+- Responds to master requests  
+- Identified by unique address  
 
-Reliable data transfer using ACK/NACK signals
-
-## Advantages
-
-Uses very few pins
-
-Ideal for communication between microcontrollers
-
-Supports multiple devices on the same bus
-
-Low power consumption
-
-# I2C Components
-## Master
-
-Controls clock signal
-
-Initiates communication
-
-Decides when to read/write
-
-## Slave
-
-Responds to Master
-
-Identified using unique address
-
-## SDA (Data Line)
-
+### SDA (Data Line)
 Carries data between devices.
 
-## SCL (Clock Line)
-
+### SCL (Clock Line)
 Synchronizes data transfer.
 
-# Example Workflow
+---
 
-Master starts communication
+## Example Workflow
+1. Master starts communication  
+2. Sends slave address  
+3. Sends data or requests data  
+4. Slave receives or sends data  
+5. Communication ends  
 
-Sends slave address
+---
 
-Sends data or requests data
+## Master–Slave Data Exchange Simulation
 
-Slave receives or sends data
+Two Arduino boards are connected:  
+- **Master Arduino** → Sends data periodically (e.g., “Hello Slave”)  
+- **Slave Arduino** → Listens to its address and processes the data  
 
-Communication ends
-
-# Master–Slave Data Exchange Simulation
-
-Two Arduino boards are connected:
-
-Master Arduino → Sends data periodically (e.g., “Hello Slave”)
-
-Slave Arduino → Listens to its address and prints received data
-
-## Data Flow
-
+### Data Flow
 Master Arduino → I2C Bus (SDA/SCL) → Slave Arduino
 
-## How Communication Happens
+### Communication Method
+- Both boards share **common ground**
+- SDA lines connected together  
+- SCL lines connected together  
+- Master sends bytes  
+- Slave reads them using interrupt-based functions  
 
-Both boards share common ground
+### Applications
+- Multi-controller robotics  
+- Industrial control systems  
+- Smart home automation  
+- Distributed sensor networks  
 
-SDA lines are connected together
+---
 
-SCL lines are connected together
+## I2C vs UART vs SPI
 
-Master sends bytes
-
-Slave reads them using interrupt-based I2C receive events
-
-## Applications
-
-Multi-controller projects
-
-Robotics (main controller + sensor controllers)
-
-Industrial communication networks
-
-Smart home automation
-
-# I2C vs UART vs SPI (Why I2C is used)
 | Feature              | UART                 | SPI                    | I2C                                 |
 | -------------------- | -------------------- | ---------------------- | ----------------------------------- |
 | Number of Wires      | 2                    | 4+                     | 2                                   |
@@ -123,44 +104,33 @@ Smart home automation
 | Complexity           | Low                  | High                   | Medium                              |
 | Usage                | Serial communication | High-speed peripherals | Sensor networks, controller linking |
 
+**I2C is preferred** because it provides multi-slave communication with minimal wiring.
 
-I2C is chosen because it provides multi-slave communication with minimal wiring.
-
+---
 
 ## Simulation Features
+- Real-time SDA/SCL signal visualization  
+- Multi-device communication  
+- Live serial monitor output  
+- Master–Slave addressing  
+- Error debugging support  
 
-Real-time SDA/SCL signal visualization
+### Benefits
+- No physical hardware required  
+- Easy code testing  
+- Safe for beginners  
+- Accurate timing emulation  
 
-Multiple device communication
+---
 
-Live serial monitor output
+## Experiment Environment
+Simulation environment allows:
 
-Master–Slave address matching
+- Creating two virtual Arduino boards  
+- Connecting SDA and SCL  
+- Assigning Master and Slave roles  
+- Monitoring data exchange in real-time  
+- Debugging I2C events  
 
-Smooth debugging of communication errors
+This makes I2C simulation extremely effective for learning inter-device communication.
 
-## Benefits
-
-No physical hardware required
-
-Easy code testing
-
-Safe environment for beginners
-
-Accurate emulation of bus timing
-
-# Experiment Environment
-
-The simulation environment allows:
-
-Creating two virtual Arduino boards
-
-Linking SDA and SCL lines
-
-Setting one as Master and other as Slave
-
-Monitoring data exchange in real-time
-
-Debugging I2C events
-
-This makes it highly useful for learning inter-device communication.
