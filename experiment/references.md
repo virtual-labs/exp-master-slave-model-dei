@@ -1,4 +1,4 @@
-## References
+### References
 
 1. Arduino Official Documentation, "Wire Library (I2C Communication)", Available at: https://www.arduino.cc/en/Reference/Wire
 2. Michael Margolis, "Arduino Cookbook", O’Reilly Media, 2011.
