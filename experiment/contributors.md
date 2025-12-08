@@ -3,6 +3,7 @@
 | SNo. | Name | Email | Institute | Department |
 | :---: | :---: | :---: | :---: | :---: |
 | 1 | Dr. Sanjay Saini | sanjay.saini@dei.ac.in | Dayalbagh Educational Institute | Physics and Computer Science |
+| 2 | Dr. Amarjeet Singh Chauhan | amarjeetsinghchauhan@dei.ac.in | Dayalbagh Educational Institute | Physics and Computer Science |
 
 ### Developers
 | SNo. | Name | Email | Institute | Department |

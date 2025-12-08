@@ -1,1 +1,1 @@
-Simulation of establishing master slave model using Arduino and I2C Protocols.
+## Simulation of establishing master slave model using Arduino and I2C Protocols
