@@ -1,357 +1,533 @@
-h1 {
-  background-color: beige;
+* {
   margin: 0;
-}
-
-header {
-  height: 8vh;
-  border-bottom: 4px solid cadetblue;
-}
-
-header h2 {
-  color: cadetblue;
-  display: inline-block;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-  height: 100vh;
-  width: 100vw;
+  min-height: 100vh;
+  width: 100%;
   margin: 0;
   overflow: hidden;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #F4F5F6;
+}
+
+.container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  flex-direction: row;
+  background-color: #F4F5F6;
+}
+
+.if-vid {
+  flex: 1;
+  padding: 20px;
+  overflow: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .p-head {
   font-family: Arial, Helvetica, sans-serif;
   font-weight: 600;
-  letter-spacing: 1px;
-  margin-left: 4px;
-}
-
-.exp-changer {
-  display: flex;
-  justify-content: center;
-}
-
-.exp-changer-heading {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: grey;
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 20px;
-  outline: none;
-  position: relative;
-  top: 1.6vh;
-}
-
-.navbar {
-  display: flex;
-  justify-content: space-between;
-}
-
-.navbar1 {
-  width: 6%;
-  height: 35px;
-  color: #fff;
-  background-color: rgba(4, 59, 79, 0.5);
-  font-size: 1.4rem;
-  border-radius: 0 0 0 0;
-  font-family: "Raleway", sans-serif;
-}
-
-.navbar1 a {
-  margin-left: 10px;
-  color: #fff;
-  text-decoration: none;
-}
-
-.navbar1 a:hover {
-  text-decoration: none;
-}
-
-.navbar-heading {
-  width: 15%;
-  height: 35px;
-  display: flex;
-  justify-content: center;
-  color: #fff;
-  background-color: rgba(4, 59, 79, 0.5);
-  font-size: 1.4rem;
-  border-radius: 0 0 20px 20px;
-  font-family: "Raleway", sans-serif;
-}
-
-.navbar2 {
-  width: 7%;
-  height: 35px;
-  color: #fff;
-  background-color: rgba(4, 59, 79, 0.5);
-  font-size: 1.4rem;
-  border-radius: 0 0 0 20px;
-  font-family: "Raleway", sans-serif;
-}
-
-.navbar2 a {
-  margin-left: 10px;
-  color: #fff;
-  text-decoration: none;
-}
-
-.navbar2 a:hover {
-  text-decoration: none;
-}
-
-.container {
-  height: 100%;
-  width: 100%;
-  margin-top: 0;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  background-color: #F4F5F7;
-}
-
-.separator {
-  border-radius: 20px;
-  height: 70%;
-  width: 5px;
-  margin-top: 32px;
-  background-color: rgba(4, 59, 79, 0.5);
-  transition: all 0.4s ease-in;
-  transform: scale(1.1);
-  margin-left: 60px;
-}
-
-.if-vid {
-  width: 50%;
-  height: 100%;
-  padding: 3px;
-  border-radius: 10px;
-  overflow: hidden;
+  letter-spacing: 0.5px;
+  margin-bottom: 20px;
+  font-size: 18px;
+  color: #333;
+  margin-left: -200px;
 }
 
 .interfacing {
-  display: flex;
-  align-items: center;
   position: relative;
+  display: inline-block;
+  width: 100%;
+  max-width: 700px;
+  margin: 0 auto;
 }
 
 .interfacing img {
-  transition: all 0.4s ease;
-  width: 880px;
+  width: 125%;
+
   height: auto;
-  margin-left: -15px;
-  margin-top: 60px;
+  display: block;
+  margin-top: 90px;
+  margin-left: -95px;
 }
 
 #pushbutton {
   background-color: rgba(0, 128, 0, 0);
   z-index: 1000;
-  width: 25px;
-  height: 25px;
-  border: none;
-  margin-left: 281px;
-  margin-top: 350px;
+  /* width: clamp(25px, 4vw, 32px);
+  height: clamp(25px, 4vw, 32px); */
+  min-width: 26px;
+  min-height: 25px;
+  border: 2px solid #00640000;
+  /* border-radius: 50%; */
   cursor: pointer;
   position: absolute;
-  display: inline-block;
-}
-
-
-
-#buzzerpushbutton {
-  background-color: rgba(255, 0, 0, 0);
-  position: absolute;
-  z-index: 5;
-  width: 25px;
-  border: none;
-  height: 25px;
-  margin-left: 389px;
-  margin-top: -158px;
-  cursor: pointer;
-}
-
-.code {
-  width: 40vw;
-  height: 80vh;
-  padding: 3px;
-  border-radius: 10px;
-}
-
-.startStop h2 {
-  background-color: #009C4E;
-  color: #fff;
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  padding: 5px 30px;
-  border-radius: 4px;
-  cursor: pointer;
-  margin-top: 12px;
-}
-
-.code-head {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 10px;
-}
-
-#codeInput {
-  width: 700px;
-  height: 60vh;
-  border-radius: 10px;
-  border: 1px solid rgba(4, 59, 79, 0.2);
-}
-
-#arduinoCode {
-  padding: 20px;
-  width: 35vw;
-  height: 60vh;
-  resize: none;
-}
-
-#Code-slave {
+  left: 31%;
+  top: 87%;
+  transform: translate(-50%, -50%);
   display: none;
-  padding: 20px;
-  width: 40vw;
-  height: 60vh;
-  resize: none;
 }
 
-/* VS Code Style Tabs */
-.code-tabs {
+.right-panel {
+  width: 650px;
   display: flex;
-  background-color: #f1f1f1;
-  border-bottom: 1px solid #ddd;
+  flex-direction: column;
+  background-color: #ffffff;
+  border-left: 1px solid #e0e0e0;
+  overflow: hidden;
+}
+
+.instruction-box {
+  flex: 0 0 50%;
+  display: flex;
+  flex-direction: column;
+  border-bottom: 1px solid #e0e0e0;
+  overflow: hidden;
+}
+
+.box-title {
+  padding: 15px 20px;
+  background-color: #f8f9fa;
+  border-bottom: 1px solid #e0e0e0;
+  font-size: 16px;
+  font-weight: 600;
+  color: #333;
+  margin: 0;
+}
+
+.instruction-content {
+  flex: 1;
+  overflow-y: auto;
+  padding: 20px;
+  font-size: 14px;
+  line-height: 1.6;
+  color: #555;
+}
+
+.instruction-content::-webkit-scrollbar {
+  width: 8px;
+}
+
+.instruction-content::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+.instruction-content::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 4px;
+}
+
+.instruction-content::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+.instruction-section {
+  margin-bottom: 20px;
+}
+
+.instruction-section:last-child {
+  margin-bottom: 0;
+}
+
+.instruction-section h4 {
+  color: #2c3e50;
+  margin-bottom: 10px;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.instruction-section p {
+  margin-bottom: 10px;
+  color: #555;
+}
+
+.instruction-section ol,
+.instruction-section ul {
+  margin-left: 20px;
   margin-bottom: 10px;
 }
 
+.instruction-section li {
+  margin-bottom: 8px;
+  line-height: 1.5;
+}
+
+.instruction-section strong {
+  color: #333;
+  font-weight: 600;
+}
+
+.code-box {
+  flex: 0 0 50%;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.code-box-header {
+  padding: 15px 20px;
+  background-color: #2d2d2d;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #3d3d3d;
+}
+
+.code-box-header .box-title {
+  color: #ffffff;
+  background: transparent;
+  border: none;
+  padding: 0;
+  font-size: 14px;
+}
+
+.code-header-left {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.code-tabs {
+  display: flex;
+  gap: 5px;
+}
+
 .tab-button {
-  background-color: #e1e1e1;
+  background-color: #3d3d3d;
   border: none;
   outline: none;
   cursor: pointer;
-  padding: 10px 20px;
-  font-size: 14px;
+  padding: 6px 14px;
+  font-size: 12px;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  color: #666;
-  border-right: 1px solid #ddd;
+  color: #999;
+  border-radius: 3px;
   transition: all 0.3s ease;
 }
 
 .tab-button:hover {
-  background-color: #d1d1d1;
-  color: #333;
+  background-color: #4a4a4a;
+  color: #ccc;
 }
 
 .tab-button.active {
-  background-color: #fff;
-  color: #333;
-  border-bottom: 2px solid #007acc;
+  background-color: #1e1e1e;
+  color: #fff;
   font-weight: 500;
 }
 
-.tab-button:first-child {
-  border-top-left-radius: 4px;
+.code-actions {
+  display: flex;
+  gap: 10px;
 }
 
-.tab-button:last-child {
-  border-top-right-radius: 4px;
-  border-right: none;
-}
-
-/* Dropdown Button */
-.dropbtn {
-  background-color: #04AA6D;
-  color: white;
-  padding: 7px;
-  font-size: 16px;
+.control-btn {
+  padding: 6px 14px;
   border: none;
-  border-radius: 5px;
-}
-
-/* The container <div> - needed to position the dropdown content */
-.dropdown {
-  position: relative;
-  display: inline-block;
-}
-
-/* Dropdown Content (Hidden by Default) */
-.dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: #f1f1f1;
-  min-width: 100px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  z-index: 1;
-}
-
-/* Links inside the dropdown */
-.dropdown-content a {
-  color: black;
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
-}
-
-/* Change color of dropdown links on hover */
-.dropdown-content a:hover {background-color: #ddd;}
-
-/* Show the dropdown menu on hover */
-.dropdown:hover .dropdown-content {display: block;}
-
-/* Change the background color of the dropdown button when the dropdown content is shown */
-.dropdown:hover .dropbtn {background-color: #3e8e41;}
-
-@media screen and (max-width: 1000px) {
-  .navbar1 {
-    width: 14vw;
-    height: 27px;
-    font-size: 1.1rem;
-  }
-  .navbar2 {
-    width: 17vw;
-    height: 27px;
-    font-size: 1.1rem;
-  }
-  .navbar-heading {
-    width: 0;
-    height: 0;
-  }
-}
-
-#pagechanger {
-  border: none;
-  color: cadetblue;
-  font-size: 20px;
-  outline: none;
-  position: relative;
-  top: 2.5vh;
-}
-
-#pagechanger:hover {
+  border-radius: 3px;
+  font-size: 12px;
+  font-weight: 600;
   cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  transition: all 0.3s ease;
 }
 
-.CodeMirror {
-  height: 485px;
-  border: 1px solid #ddd;
-  font-family: monospace;
-  font-size: 16px;
-  background-color: #f5f5f5;
+.start-btn {
+  background-color: #4caf50;
+  color: white;
 }
 
-#slideswitchNotification {
+.start-btn:hover {
+  background-color: #45a049;
+}
+
+.stop-btn {
+  background-color: #f44336;
+  color: white;
+}
+
+.stop-btn:hover {
+  background-color: #da190b;
+}
+
+.play-icon {
+  font-size: 10px;
+}
+
+.code-btn {
+  padding: 5px 12px;
+  background-color: #4a4a4a;
+  color: #ffffff;
+  border: none;
+  border-radius: 3px;
+  font-size: 12px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.code-btn:hover {
+  background-color: #5a5a5a;
+}
+
+.code-content {
+  flex: 1;
+  overflow: hidden;
+  background-color: #272822;
+}
+
+.code-content .CodeMirror {
+  width: 100%;
+  height: 100%;
+  font-family: 'Consolas', 'Courier New', monospace;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.code-content .CodeMirror-scroll {
+  overflow-y: auto !important;
+  overflow-x: auto !important;
+  min-height: 100%;
+}
+
+.code-content .CodeMirror-hscrollbar {
+  height: 12px !important;
+}
+
+.code-content .CodeMirror-vscrollbar {
+  width: 12px !important;
+}
+
+.code-content .CodeMirror-scrollbar-filler {
+  background-color: #272822;
+}
+
+.code-content .CodeMirror-hscrollbar::-webkit-scrollbar {
+  height: 12px;
+}
+
+.code-content .CodeMirror-hscrollbar::-webkit-scrollbar-track {
+  background: #1e1e1e;
+}
+
+.code-content .CodeMirror-hscrollbar::-webkit-scrollbar-thumb {
+  background: #555;
+  border-radius: 6px;
+}
+
+.code-content .CodeMirror-hscrollbar::-webkit-scrollbar-thumb:hover {
+  background: #777;
+}
+
+.code-content .CodeMirror-vscrollbar::-webkit-scrollbar {
+  width: 12px;
+}
+
+.code-content .CodeMirror-vscrollbar::-webkit-scrollbar-track {
+  background: #1e1e1e;
+}
+
+.code-content .CodeMirror-vscrollbar::-webkit-scrollbar-thumb {
+  background: #555;
+  border-radius: 6px;
+}
+
+.code-content .CodeMirror-vscrollbar::-webkit-scrollbar-thumb:hover {
+  background: #777;
+}
+
+#arduinoCode {
   display: none;
-  position: absolute;
-  background: #ffecb3;
-  border: 2px solid #ff9800;
-  color: #222;
-  font-weight: bold;
-  padding: 12px 18px;
-  border-radius: 8px;
-  box-shadow: 0 4px 16px #0004;
-  z-index: 1000;
-  margin-top: 99px;
-  margin-left: -590px;
 }
+
+@media screen and (max-width: 1024px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .if-vid {
+    height: 50%;
+    padding: 15px;
+  }
+
+  .p-head {
+    margin-left: 0;
+    text-align: center;
+    font-size: 16px;
+  }
+
+  .right-panel {
+    width: 100%;
+    height: 50%;
+  }
+
+  .instruction-box,
+  .code-box {
+    flex: 0 0 50%;
+  }
+
+  .code-box-header {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .code-box-header .box-title {
+    flex: 1 1 100%;
+    margin-bottom: 5px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .if-vid {
+    padding: 10px;
+    height: 45%;
+  }
+
+  .p-head {
+    font-size: 14px;
+    margin-left: 0;
+    margin-bottom: 10px;
+  }
+
+  .interfacing {
+    max-width: 100%;
+  }
+
+  #pushbutton {
+    width: 28px;
+    height: 28px;
+    min-width: 28px;
+    min-height: 28px;
+  }
+
+  .right-panel {
+    width: 100%;
+    height: 55%;
+  }
+
+  .instruction-box {
+    flex: 0 0 45%;
+  }
+
+  .code-box {
+    flex: 0 0 55%;
+  }
+
+  .box-title {
+    padding: 12px 15px;
+    font-size: 14px;
+  }
+
+  .instruction-content {
+    padding: 15px;
+    font-size: 13px;
+  }
+
+  .control-btn {
+    padding: 8px 12px;
+    font-size: 11px;
+    gap: 4px;
+  }
+
+  .code-box-header {
+    padding: 10px 15px;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .code-box-header .box-title {
+    margin-bottom: 8px;
+  }
+
+  .code-actions {
+    width: 100%;
+    justify-content: flex-start;
+  }
+
+  .code-content .CodeMirror {
+    font-size: 11px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .if-vid {
+    padding: 8px;
+    height: 40%;
+  }
+
+  .p-head {
+    font-size: 12px;
+    margin-bottom: 8px;
+  }
+
+  #pushbutton {
+    width: 32px;
+    height: 32px;
+    min-width: 32px;
+    min-height: 32px;
+  }
+
+  .right-panel {
+    height: 60%;
+  }
+
+  .instruction-box {
+    flex: 0 0 40%;
+  }
+
+  .code-box {
+    flex: 0 0 60%;
+  }
+
+  .box-title {
+    padding: 10px 12px;
+    font-size: 13px;
+  }
+
+  .instruction-content {
+    padding: 10px;
+    font-size: 12px;
+  }
+
+  .instruction-section h4 {
+    font-size: 13px;
+  }
+
+  .instruction-section li {
+    margin-bottom: 6px;
+  }
+
+  .control-btn {
+    padding: 8px 10px;
+    font-size: 10px;
+    gap: 3px;
+  }
+
+  .play-icon {
+    font-size: 9px;
+  }
+
+  .code-box-header {
+    padding: 8px 12px;
+  }
+
+  .code-box-header .box-title {
+    font-size: 12px;
+    margin-bottom: 6px;
+  }
+
+  .code-content .CodeMirror {
+    font-size: 10px;
+  }
+}
+
