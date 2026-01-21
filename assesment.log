@@ -1,0 +1,30 @@
+=/pretest.json
+{
+  _: [],
+  f: [
+    '/home/runner/work/exp-master-slave-model-dei/exp-master-slave-model-dei/experiment/pretest.json'
+  ],
+  files: [
+    '/home/runner/work/exp-master-slave-model-dei/exp-master-slave-model-dei/experiment/pretest.json'
+  ],
+  c: 'assessment',
+  contentTypes: 'assessment',
+  'content-types': 'assessment',
+  '$0': 'validate'
+}
+Validated true
+=/posttest.json
+{
+  _: [],
+  f: [
+    '/home/runner/work/exp-master-slave-model-dei/exp-master-slave-model-dei/experiment/posttest.json'
+  ],
+  files: [
+    '/home/runner/work/exp-master-slave-model-dei/exp-master-slave-model-dei/experiment/posttest.json'
+  ],
+  c: 'assessment',
+  contentTypes: 'assessment',
+  'content-types': 'assessment',
+  '$0': 'validate'
+}
+Validated true

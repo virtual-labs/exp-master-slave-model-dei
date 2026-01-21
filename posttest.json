@@ -1,0 +1,115 @@
+{
+  "version": 2.0,
+  "questions": [
+    {
+      "question": "1. What is the working principle of I2C communication?",
+      "answers": {
+        "a": "Single-wire asynchronous communication",
+        "b": "Master–slave communication using clock and data lines",
+        "c": "Parallel data transfer",
+        "d": "Wireless data communication"
+      },
+      "correctAnswer": "b",
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "2. Which statement correctly compares I2C with SPI and UART?",
+      "answers": {
+        "a": "I2C uses more wires than SPI",
+        "b": "UART supports multiple slaves like I2C",
+        "c": "I2C uses fewer wires than SPI and supports multiple devices",
+        "d": "SPI is slower than I2C"
+      },
+      "correctAnswer": "c",
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "3. Why are pull-up resistors required on SDA and SCL lines?",
+      "answers": {
+        "a": "To increase communication speed",
+        "b": "To keep lines at logic HIGH when idle",
+        "c": "To reduce clock noise",
+        "d": "To protect the microcontroller"
+      },
+      "correctAnswer": "b",
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "4. How does the master identify the correct slave?",
+      "answers": {
+        "a": "Using pin numbers",
+        "b": "By matching device frequency",
+        "c": "By calling the slave's unique address",
+        "d": "By detecting voltage levels"
+      },
+      "correctAnswer": "c",
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "5. Which of the following is a real-life IoT use case of I2C?",
+      "answers": {
+        "a": "Controlling DC motors in robotics",
+        "b": "Reading temperature sensor data with an OLED display",
+        "c": "Communicating with Wi-Fi routers",
+        "d": "Sending audio signals to speakers"
+      },
+      "correctAnswer": "b",
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "6. What happens if two slaves share the same address?",
+      "answers": {
+        "a": "Communication becomes faster",
+        "b": "Both slaves respond causing data collision",
+        "c": "One slave automatically turns off",
+        "d": "Master blocks communication"
+      },
+      "correctAnswer": "b",
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "7. How can a slave send data back to the master?",
+      "answers": {
+        "a": "By initiating communication itself",
+        "b": "When master sends a read command",
+        "c": "By generating its own clock pulse",
+        "d": "By using external interrupts"
+      },
+      "correctAnswer": "b",
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "8. Why is clock synchronization important in I2C?",
+      "answers": {
+        "a": "It increases voltage stability",
+        "b": "It ensures all devices communicate at the same speed",
+        "c": "It provides wireless synchronization",
+        "d": "It reduces the number of wires"
+      },
+      "correctAnswer": "b",
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "9. How does I2C reduce wiring complexity?",
+      "answers": {
+        "a": "Uses a separate wire for each slave",
+        "b": "Uses high-speed serial communication",
+        "c": "Uses only two wires for all devices",
+        "d": "Eliminates the need for ground connection"
+      },
+      "correctAnswer": "c",
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "10. Why is I2C preferred in multi-sensor IoT devices?",
+      "answers": {
+        "a": "High speed for large data transfer",
+        "b": "Ability to connect many sensors with minimal pins",
+        "c": "Works only with analog sensors",
+        "d": "Requires no addressing"
+      },
+      "correctAnswer": "b",
+      "difficulty": "intermediate"
+    }
+  ]
+}

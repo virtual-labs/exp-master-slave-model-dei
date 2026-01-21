@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		{{> meta }}
+		{{> commons }}
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/virtual-labs/virtual-style@0.0.6-b/css/style.min.css">
+		<link rel="stylesheet" href="{{this.cssModule}}">
+	</head>
+
+	<body> 
+		<div>
+			<div class="columns is-mobile is-centered is-vcentered">
+				<div class="column is-2">
+					<a href="http://vlab.co.in" class="navbar-brand">
+						<img src="{{this.assets_path}}/assets/images/vlabs-color-small-moe.jpg" alt="vlabs logo" class="vlabs-logo">
+					</a>
+				</div>
+				<div class="column is-8 has-text-centered">
+					<div class="title is-2">
+						{{{this.experiment_name}}}
+					</div>
+				</div>
+				<div class="column is-2">
+				</div>
+			</div>
+		</div>
+
+		{{!-- <div id="loader" class="loader">
+		</div> --}}
+
+		<div class="columns is-mobile is-centered is-flex">
+		<div class="column has-text-centered">
+			<div class="title">Validator</div>
+		</div>
+	</div>
+
+
+	<div class="columns is-mobile is-centered is-flex">
+		<div class="column is-4-desktop is-3-mobile is-3-tablet has-text-centered">
+			<div class="panel">
+				<label for="checkbox-eslint" class="v-checkbox">
+					<input type="checkbox" id="checkbox-eslint" class="v-checkbox-input" checked onclick="toggleEslint()">
+					ESLint
+				</label>
+				
+				<label for="checkbox-https" class="v-checkbox">
+					<input type="checkbox" id="checkbox-https" class="v-checkbox-input" checked onclick="toggleHttps()">
+					HTTPS
+				</label>
+
+				<label for="checkbox-descriptor" class="v-checkbox">
+					<input type="checkbox" id="checkbox-descriptor" class="v-checkbox-input" checked onclick="toggleDescriptor()">
+					Descriptor
+				</label>
+
+				<label for="checkbox-assesment" class="v-checkbox">
+					<input type="checkbox" id="checkbox-assesment" class="v-checkbox-input" checked onclick="toggleAssesment()">
+					Assesment
+				</label>
+
+
+				<div class="panel-label">
+					Severity
+				</div>
+				<label for="checkbox-warning" class="v-checkbox">
+					<input type="checkbox" id="checkbox-warning" class="v-checkbox-input" checked onclick="toggleWarning()">
+					Warning
+				</label>
+				
+				<label for="checkbox-error" class="v-checkbox">
+					<input type="checkbox" id="checkbox-error" class="v-checkbox-input" checked onclick="toggleError()">
+					Error
+				</label>
+
+
+				<button class="v-button small-btn" onclick="collapseAll()">Collapse All</button>
+			</div>
+		</div>
+		<div class="column is-8-desktop is-9-mobile is-9-tablet has-text-centered">
+			<div id="eslint" class="card">
+				<div class="card-title">
+					ESLint
+				</div>
+				<div id="eslint-collapse-icon" class="collapse-icon" onclick="collapseEslint()">
+					<i class="fa fa-chevron-down"></i>
+				</div>
+				<div id="output-eslint" class="card-content">
+				</div>
+			</div>
+			<div id="https" class="card">
+				<div class="card-title">
+					HTTPS
+				</div>
+				<div id="https-collapse-icon" class="collapse-icon" onclick="collapseHttps()">
+					<i class="fa fa-chevron-down"></i>
+				</div>
+				<div id="output-https" class="card-content">
+				</div>
+			</div>
+			<div id="descriptor" class="card">
+				<div class="card-title">
+					Experiment Descriptor
+				</div>
+				<div id="https-collapse-icon" class="collapse-icon" onclick="collapseDescriptor()">
+					<i class="fa fa-chevron-down"></i>
+				</div>
+				<div id="output-descriptor" class="card-content">
+				</div>
+			</div>
+			<div id="assesment" class="card">
+				<div class="card-title">
+					Assesment Task
+				</div>
+				<div id="https-collapse-icon" class="collapse-icon" onclick="collapseAssesment()">
+					<i class="fa fa-chevron-down"></i>
+				</div>
+				<div id="output-assesment" class="card-content">
+				</div>
+			</div>
+		</div>
+	</div>
+		<script type="module" src="{{this.jsModule}}"></script>
+	</body>
+</html>
