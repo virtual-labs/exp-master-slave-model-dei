@@ -121,7 +121,7 @@ A typical I2C data transfer follows a well-defined sequence:
 
 This sequence ensures reliable and synchronized data exchange.
 
-<div><img src="./images/i2c_communication.avif" width="50%"></div>  
+<div><img src="./images/i2c_communication.avif" width="80%"></div>  
 
 #### Arduino and I2C Communication
 
