@@ -3,15 +3,15 @@
 <b>Discipline | <b>Computer Science  
 :--|:--|  
 <b> Lab | <b> Internet of Things  
-<b> Experiment|     <b> Simulation of sending live sensors data on IoT Platform using MQTT Protocols and ESP8266/ESP32.
+<b> Experiment|     <b> Simulation of establishing master slave model using Arduino and I2C Protocol.
 
 ### About the Experiment 
 
-This experiment focuses on simulating real-time sensor data transmission using the MQTT communication protocol.  
-It demonstrates how ESP8266/ESP32 modules connect to an MQTT broker for lightweight message exchange.  
-Students learn the publish–subscribe model and topic-based communication mechanism.  
-The experiment introduces concepts such as broker, client, QoS levels, and asynchronous data transfer.  
-The simulation provides practical understanding of efficient and low-bandwidth communication in IoT systems.
+This experiment focuses on simulating communication between multiple Arduino boards using the I2C protocol.  
+It demonstrates the master–slave architecture where one device controls data exchange while others respond.  
+Students learn addressing mechanisms, synchronous communication, and data transfer over shared bus lines.  
+The experiment introduces serial communication concepts using SDA and SCL lines.  
+The simulation provides practical understanding of multi-device coordination in embedded and IoT systems.
 
 <b>Name of Developer | <b> Dr. Sanjay Saini, Dr. Amarjeet Singh Chauhan  
 :--|:--|  
