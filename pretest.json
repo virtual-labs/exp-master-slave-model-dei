@@ -1,0 +1,115 @@
+{
+  "version": 2.0,
+  "questions": [
+    {
+      "question": "1. What does I2C stand for?",
+      "answers": {
+        "a": "Inter-Integrated Circuit",
+        "b": "Internal Input Communication",
+        "c": "Integrated Interface Channel",
+        "d": "Inter-Internet Controller"
+      },
+      "correctAnswer": "a",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "2. How many wires does I2C use?",
+      "answers": {
+        "a": "1",
+        "b": "2",
+        "c": "3",
+        "d": "4"
+      },
+      "correctAnswer": "b",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "3. Which pin carries clock signals?",
+      "answers": {
+        "a": "SDA",
+        "b": "SCL",
+        "c": "VCC",
+        "d": "GND"
+      },
+      "correctAnswer": "b",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "4. A slave in I2C communication requires a unique ___.",
+      "answers": {
+        "a": "Frequency",
+        "b": "Pin Number",
+        "c": "Address",
+        "d": "Voltage Level"
+      },
+      "correctAnswer": "c",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "5. Arduino Uno I2C pins are labeled as ___ and ___.",
+      "answers": {
+        "a": "TX and RX",
+        "b": "MOS and MISO",
+        "c": "SDA and SCL",
+        "d": "A0 and A1"
+      },
+      "correctAnswer": "c",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "6. Who initiates data transfer in I2C?",
+      "answers": {
+        "a": "Slave",
+        "b": "Master",
+        "c": "Both master and slave",
+        "d": "Any device randomly"
+      },
+      "correctAnswer": "b",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "7. What is the role of ACK in I2C?",
+      "answers": {
+        "a": "Confirms message received",
+        "b": "Starts the clock",
+        "c": "Selects device speed",
+        "d": "Powers the bus"
+      },
+      "correctAnswer": "a",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "8. What library is used for I2C in Arduino?",
+      "answers": {
+        "a": "Ethernet.h",
+        "b": "SPI.h",
+        "c": "Wire.h",
+        "d": "WiFi.h"
+      },
+      "correctAnswer": "c",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "9. Maximum number of devices supported on I2C bus?",
+      "answers": {
+        "a": "2 devices only",
+        "b": "10 devices",
+        "c": "100 devices",
+        "d": "Many devices (depends on unique addresses)"
+      },
+      "correctAnswer": "d",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "10. I2C is commonly used with which type of modules?",
+      "answers": {
+        "a": "High-current motors",
+        "b": "Sensors and displays",
+        "c": "Wi-Fi routers",
+        "d": "Speakers"
+      },
+      "correctAnswer": "b",
+      "difficulty": "beginner"
+    }
+  ]
+}

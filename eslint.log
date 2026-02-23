@@ -1,0 +1,8 @@
+
+/home/runner/work/exp-master-slave-model-dei/exp-master-slave-model-dei/experiment/simulation/src/js/main.js
+   3:10  warning  'changePower' is defined but never used     no-unused-vars
+  40:10  warning  'changeImage' is defined but never used     no-unused-vars
+  52:10  warning  'changeLedColor' is defined but never used  no-unused-vars
+
+✖ 3 problems (0 errors, 3 warnings)
+

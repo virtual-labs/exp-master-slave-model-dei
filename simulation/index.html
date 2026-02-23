@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Virtual IoT Lab DEI</title>
+    <link rel="icon" href="https://www.vlab.co.in/images/logo.jpg" type="image/x-icon" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/codemirror.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/theme/monokai.min.css" />
+    <link rel="stylesheet" type="text/css" href="./src/css/style.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="if-vid">
+        <p class="p-head">Simulation of establishing master slave model using Arduino and I2C Protocols:</p>
+        <div class="interfacing">
+          <img id="ifimg" src="./src/images/led/led_dis.png" alt="interfacing" />
+          <button id="pushbutton" onclick="changeImage();"></button>
+          <button id="pushbutton2" onclick="changeLedColor();"></button>
+        </div>
+      </div>
+
+      <div class="right-panel">
+        <div class="instruction-box">
+          <h3 class="box-title">Instructions</h3>
+          <div class="instruction-content">
+            <div class="instruction-section">
+              <h4>Objective:</h4>
+              <p>Understand master-slave communication between two Arduino boards using I2C (Inter-Integrated Circuit) protocol.</p>
+            </div>
+
+            <div class="instruction-section">
+              <h4>Steps to Perform:</h4>
+              <ol>
+                <li>Click <strong>"Start Simulation"</strong> to power up both Arduino circuits</li>
+                <li>Click on the <strong>push button</strong> on the master Arduino</li>
+                <li>Observe how the master reads button state and sends it via I2C</li>
+                <li>The slave Arduino receives the data and controls its LED accordingly</li>
+                <li>Switch between <strong>Master.ino</strong> and <strong>Slave.ino</strong> tabs to view both codes</li>
+              </ol>
+            </div>
+
+            <div class="instruction-section">
+              <h4>Key Concepts:</h4>
+              <ul>
+                <li><strong>I2C Protocol:</strong> Two-wire serial communication between devices</li>
+                <li><strong>Master Device:</strong> Initiates communication and controls the clock line</li>
+                <li><strong>Slave Device:</strong> Responds to master's requests with unique address</li>
+                <li><strong>Wire.begin():</strong> Initialize I2C communication (master or slave)</li>
+                <li><strong>Wire.write():</strong> Master sends data to slave device</li>
+                <li><strong>Wire.read():</strong> Slave receives data from master</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="code-box">
+          <div class="code-box-header">
+            <div class="code-header-left">
+              <span class="box-title">Arduino Code</span>
+              <div class="code-tabs">
+                <button class="tab-button active" id="master-tab">Master.ino</button>
+                <button class="tab-button" id="slave-tab">Slave.ino</button>
+              </div>
+            </div>
+            <div class="code-actions">
+              <button class="control-btn start-btn" id="startBtn" onclick="changePower();">
+                <span class="play-icon">▶</span> Start Simulation
+              </button>
+            </div>
+          </div>
+          <div class="code-content">
+            <textarea id="arduinoCode" readonly>
+//Code for Master Arduino
+
+#include <Wire.h>
+int pushButton = A0;
+int x = 0;
+void setup()
+{
+  Wire.begin();
+  pinMode(pushButton, INPUT);
+}
+void loop()
+{
+  Wire.beginTransmission(1);
+  x = digitalRead(pushButton);
+  Wire.write(x);
+  Wire.endTransmission();
+  delay(500);
+}</textarea>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/codemirror.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/mode/clike/clike.min.js"></script>
+    <script src="src/js/main.js"></script>
+    <script>
+      var editor = CodeMirror.fromTextArea(document.getElementById("arduinoCode"), {
+        mode: "text/x-c++src",
+        theme: "monokai",
+        lineNumbers: true,
+        readOnly: true,
+        lineWrapping: false,
+        matchBrackets: true,
+        indentUnit: 2,
+        tabSize: 2,
+        scrollbarStyle: "native"
+      });
+
+      // Tab switching functionality
+      $(document).ready(function () {
+        $("#master-tab").click(function () {
+          $(".tab-button").removeClass("active");
+          $("#master-tab").addClass("active");
+          
+          var masterCode = `//Code for Master Arduino
+
+#include <Wire.h>
+int pushButton = A0;
+int x = 0;
+void setup()
+{
+  Wire.begin();
+  pinMode(pushButton, INPUT);
+}
+void loop()
+{
+  Wire.beginTransmission(1);
+  x = digitalRead(pushButton);
+  Wire.write(x);
+  Wire.endTransmission();
+  delay(500);
+}`;
+          editor.setValue(masterCode);
+        });
+        
+        $("#slave-tab").click(function () {
+          $(".tab-button").removeClass("active");
+          $("#slave-tab").addClass("active");
+          
+          var slaveCode = `//Code for Slave Arduino
+
+#include <Wire.h>
+int pinLed=13;
+int x =0;
+void setup()
+{
+  Wire.begin(1);
+  Wire.onReceive(receiveEvent); 
+  pinMode(pinLed, OUTPUT);
+}
+void loop()
+{
+  delay(100);
+}
+void receiveEvent(int howMany)
+{
+  x = Wire.read();
+  if (x == 0)
+    {
+      digitalWrite(pinLed,HIGH);
+    }
+  else
+    {
+      digitalWrite(pinLed,LOW);
+    }
+      }`;
+          editor.setValue(slaveCode);
+        });
+      });
+    </script>
+  <script src="../assets/js/iframeResize.js"></script>
+        
+        </body>
+</html>

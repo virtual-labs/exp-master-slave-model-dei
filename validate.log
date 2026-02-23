@@ -1,0 +1,14 @@
+{
+  _: [],
+  f: [
+    '/home/runner/work/exp-master-slave-model-dei/exp-master-slave-model-dei/experiment-descriptor.json'
+  ],
+  files: [
+    '/home/runner/work/exp-master-slave-model-dei/exp-master-slave-model-dei/experiment-descriptor.json'
+  ],
+  '$0': 'validate'
+}
+Json Error: There are additional experiment properties
+Json Error: must match "then" schema
+Failed while validating /home/runner/work/exp-master-slave-model-dei/exp-master-slave-model-dei/experiment-descriptor.json
+Error: Schema is Invalid

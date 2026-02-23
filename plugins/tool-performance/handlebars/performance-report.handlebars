@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		{{> meta }}
+		{{> commons }}
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/virtual-labs/virtual-style@0.0.6-b/css/style.min.css">
+		<link rel="stylesheet" href="{{this.cssModule}}">
+	</head>
+
+	<body> 
+		<div>
+			<div class="columns is-mobile is-centered is-vcentered">
+				<div class="column is-2">
+					<a href="http://vlab.co.in" class="navbar-brand">
+						<img src="{{this.assets_path}}/assets/images/vlabs-color-small-moe.jpg" alt="vlabs logo" class="vlabs-logo">
+					</a>
+				</div>
+				<div class="column is-8 has-text-centered">
+					<div class="title is-2">
+						{{{this.experiment_name}}}
+					</div>
+				</div>
+				<div class="column is-2">
+				</div>
+			</div>
+		</div>
+
+		<div id="loader" class="loader">
+		</div>
+
+		<div class="columns is-mobile is-centered is-flex">
+			<div class="column has-text-centered">
+				<div class="title">Pagewise Performance Summary</div>
+			</div>
+		</div>
+
+		<div class="columns is-mobile is-centered is-vcentered is-flex">
+			<div class="column has-text-centered is-3 is-size-4 time-stamp" id="timeStamp">
+			</div>
+			<div class="column has-text-centered is-6">
+				<button class="v-button" id="newReport">Refresh Report</button>
+			</div>
+			<div class="column has-text-centered is-3">
+				<ul class="legend is-flex if-flex-wrap is-justify-content-space-between">
+					<li class="legend-common legend-red is-size-5">Critical</li>
+					<li class="legend-common legend-orange is-size-5">Needs Work</li>
+					<li class="legend-common legend-green is-size-5">Good</li>
+				</ul>
+			</div>
+		</div>
+
+		<div class="columns is-mobile is-centered">
+			<div class="column has-text-centered">
+				<div class="v-tabs">
+					<ul>
+						{{#each units}}
+						<li {{#if this.units}} data-url="{{this.label}}" {{/if}} {{#unless this.units}} data-url="{{this.target}}" {{/unless}} {{#if this.isCurrentItem}} class="is-active" {{/if}}>
+							<a>
+								<span class="is-size-5">{{this.label}}</span>
+							</a>
+						</li>
+						{{/each}}
+					</ul>
+				</div>
+			</div>
+		</div>
+
+		{{#each units}}
+		{{#if this.units}} 
+		<div class="columns is-mobile is-centered no-show" id="{{this.label}}SubTabs">
+			<div class="column has-text-centered">
+				<div class="v-tabs">
+					<ul>
+						{{#each this.units}}
+						<li data-url="{{this.target}}" {{#if this.isCurrentItem}} class="is-active" {{/if}}>
+							<a>
+								<span class="is-size-5">{{this.label}}</span>
+							</a>
+						</li>
+						{{/each}}
+					</ul>
+				</div>
+			</div>
+		</div>
+		{{/if}}
+		{{/each}}
+
+		<!--<div class="columns is-mobile is-centered" id="gsc">-->
+			<!--<div class="column has-text-centered" id="gscRes">-->
+				<!--<div class="card is-fullwidth">-->
+					<!--<header class="card-header card-toggle is-flex is-justify-content-space-between" id="card-toggle">-->
+						<!--<a class="card-header-title" id="gscStatus"></a>-->
+						<!--<a class="card-header-icon icon" id="gscIcon">-->
+							<!--<i class="fa fa-angle-down"></i>-->
+						<!--</a>-->
+					<!--</header>-->
+					<!--<div class="card-content is-hidden">-->
+						<!--<div class="content" id="gscIssues">-->
+						<!--</div>-->
+					<!--</div>-->
+				<!--</div>-->
+			<!--</div>-->
+		<!--</div>-->
+
+		<div class="columns is-centered" id="lighthouse">
+			<div class="column has-text-centered lined" id="mobile">
+			</div>
+			<div class="column has-text-centered lined" id="desktop">
+			</div>
+		</div>
+
+		<div class="is-size-5">
+			<b>*</b>NOTE: The scores may slightly vary between       the detailed report and the given summary due to the use of different APIs for each. <a href='https://www.debugbear.com/blog/why-is-my-lighthouse-score-different-from-pagespeed-insights' target='_blank'>Learn more</a>.
+		</div>
+
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js" integrity="sha512-bZS47S7sPOxkjU/4Bt0zrhEtWx0y0CRkhEp8IckzK+ltifIIE9EMIMTuT/mEzoIMewUINruDBIR/jJnbguonqQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+		<script type="module" src="{{this.jsModule}}"></script>
+	</body>
+</html>

@@ -1,0 +1,120 @@
+.loader {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	z-index: 1;
+	width: 120px;
+	height: 120px;
+	margin: -76px 0 0 -76px;
+	border: 16px solid #f3f3f3;
+	border-radius: 50%;
+	border-top: 16px solid #3498db;
+	-webkit-animation: spin 2s linear infinite;
+	animation: spin 2s linear infinite;
+}
+
+@-webkit-keyframes spin {
+	0% { -webkit-transform: rotate(0deg); }
+	100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+	0% { transform: rotate(0deg); }
+	100% { transform: rotate(360deg); }
+}
+
+.red {
+	color: red;
+}
+
+.orange {
+	color: orange;
+}
+
+.green {
+	color: green;
+}
+
+.lined {
+	border-style: solid;
+	border-width: 2px;
+	border-color: #bbb;
+}
+
+.no-show {
+	display: none;
+}
+
+.legend {
+	list-style: none;
+	display: inline;
+}
+
+.legend-common::before {
+	content: "• ";
+	font-size: 200%;
+	vertical-align: middle;
+}
+
+.legend-red::before {
+	color: red;
+}
+
+.legend-orange::before {
+	color: orange;
+}
+
+.legend-green::before {
+	color: green;
+}
+
+.tool-tip {
+	position: relative;
+	cursor: pointer;
+}
+
+.tooltip-text {
+	visibility: hidden;
+	width: 200px;
+	background-color: black;
+	color: #fff;
+	text-align: center;
+	border-radius: 6px;
+	padding: 5px 0;
+
+	/* Position the tooltip */
+	position: absolute;
+	z-index: 1;
+	bottom: 100%;
+	left: 50%;
+	margin-left: -60px; /* Use half of the width (120/2 = 60), to center the tooltip */
+}
+
+.tool-tip:hover .tooltip-text {
+	visibility: visible;
+}
+
+.link {
+	text-decoration: underline;
+}
+
+.time-stamp {
+	color: #2c99ce;
+}
+
+.card-header {
+	background-color: #ffffff;
+	color: green;
+	border: 1px solid #bbbbbb;
+}
+
+.card-header:hover {
+	cursor: pointer;
+	background-color: #ffffc2;
+}
+
+.issue {
+	background-color: #ffffff;
+	color: red;
+	border: 1px solid #bbbbbb;
+}

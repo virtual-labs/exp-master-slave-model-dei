@@ -1,0 +1,16 @@
+/* assets/css/toast.css */
+.custom-toast-popup {
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Custom shadow */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed; /* Fixed positioning */
+    top: 50%; /* Center vertically */
+    left: 50%; /* Center horizontally */
+    transform: translate(-50%, -50%); /* Adjust for exact centering */
+    z-index: 1000; /* Ensure it appears above other elements */
+    padding: 10px;
+    color: #fff;
+    font-size: 1rem;
+  }
